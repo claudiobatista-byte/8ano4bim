@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>O Mundo Partilhado: Imperialismo, Neocolonialismo e Resistência — História, 8º ano</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#12304a;--navy2:#1c4a6b;--teal:#1f6f78;--teal-bg:#e6f1f1;
+  --gold:#b8842b;--gold-bg:#f8efdc;--terra:#a8472a;--terra-bg:#f7e8e2;
+  --green:#2f6b52;--green-bg:#e5f0ea;
+  --ink:#1d2731;--muted:#5d6a74;--line:#dcd6c8;--paper:#fcfbf7;--stone:#efece4;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --display:"Fraunces",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --side:292px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--stone);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;padding:8px 12px;border-radius:6px;z-index:100}
+.skip:focus{left:8px}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--gold),#e3b45a);z-index:60}
+
+/* ---------- sumário (gaveta à direita) ---------- */
+.toc-tab{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:60;background:var(--navy);color:#fff;border:0;border-radius:12px 0 0 12px;padding:14px 11px;cursor:pointer;font:700 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;writing-mode:vertical-rl;box-shadow:-4px 4px 18px #0004;display:flex;align-items:center;gap:8px}
+.toc-tab:hover{background:var(--navy2)}
+.toc-tab b{font-size:16px;writing-mode:horizontal-tb;color:#e3b45a}
+.toc-ov{position:fixed;inset:0;background:#0b1a2988;opacity:0;pointer-events:none;transition:opacity .25s;z-index:70}
+.toc-ov.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(400px,92vw);background:var(--navy);color:#e9eef2;z-index:80;transform:translateX(102%);transition:transform .28s ease;display:flex;flex-direction:column;font-family:var(--sans);box-shadow:-10px 0 40px #0006}
+.drawer.open{transform:none}
+.dr-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:22px 22px 14px;border-bottom:1px solid #ffffff1f}
+.dr-head .k{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#e3b45a;font-weight:700}
+.dr-head .t{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.2;margin-top:5px;color:#fff}
+.dr-close{background:#ffffff14;border:1px solid #ffffff33;color:#fff;width:36px;height:36px;border-radius:9px;font-size:20px;cursor:pointer;flex:none}
+.dr-prog{padding:12px 22px 0;font-size:12px;color:#b6c6d3}
+.dr-prog i{display:block;height:5px;border-radius:3px;background:#ffffff1f;margin-top:7px;overflow:hidden}
+.dr-prog i span{display:block;height:100%;width:0;background:#e3b45a;transition:width .2s}
+.dr-body{flex:1;overflow:auto;padding:10px 12px 24px}
+.dr-link{display:block;padding:9px 12px;border-radius:8px;color:#cfd9e1;text-decoration:none;font-size:14px;line-height:1.35}
+.dr-link:hover{background:#ffffff12;color:#fff}
+.dr-link.on{background:#ffffff1c;color:#fff}
+.acc{border-top:1px solid #ffffff14;margin-top:6px}
+.acc>button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:10px;background:none;border:0;color:#fff;font:700 11px var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:14px 12px 8px;cursor:pointer;text-align:left}
+.acc>button:after{content:"";width:8px;height:8px;border-right:2px solid #e3b45a;border-bottom:2px solid #e3b45a;transform:rotate(45deg);transition:transform .2s;flex:none;margin-right:4px}
+.acc.open>button:after{transform:rotate(-135deg)}
+.acc>.panel{display:none}.acc.open>.panel{display:block}
+.item>.row{display:flex;align-items:center}
+.item>.row a{flex:1;display:flex;gap:11px;align-items:baseline;padding:9px 12px;border-radius:8px;color:#e1e9ef;text-decoration:none;font-size:14.5px;line-height:1.3}
+.item>.row a b{color:#e3b45a;min-width:16px;font-variant-numeric:tabular-nums}
+.item>.row a:hover{background:#ffffff12}
+.item>.row a.on{background:#ffffff1c;color:#fff}
+.item .row>button{background:none;border:0;cursor:pointer;padding:10px 14px;display:flex;align-items:center;justify-content:center;color:#e3b45a;font-size:14px;line-height:1}
+.item .row>button:after{content:"▾";width:auto;height:auto;border:0;transform:none;margin:0}
+.item.open .row>button:after{transform:rotate(180deg)}
+.item>.subs{display:none;margin:0 0 6px 38px;border-left:2px solid #ffffff22}
+.item.open>.subs{display:block}
+.subs a{display:block;padding:6px 12px;color:#aebfcc;text-decoration:none;font-size:13px;line-height:1.35}
+.subs a:hover{color:#fff}
+
+/* ---------- conteúdo ---------- */
+main{margin-left:0}
+.wrap{max-width:860px;margin:0 auto;padding:0 40px}
+.sheet{background:var(--paper);box-shadow:0 1px 0 #0000000d,0 18px 44px -24px #1d27314d;margin:0 auto;max-width:980px}
+
+/* capa */
+.cover{background:var(--navy);margin:0;padding:0;line-height:0}
+.cover img{display:block;width:100%;height:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* bloco de abertura / seções */
+section.chapter{background:var(--paper);margin:28px auto;max-width:980px;box-shadow:0 1px 0 #0000000d,0 18px 44px -26px #1d27314d}
+.ch-head{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:end;padding:54px 64px 30px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#f4f1e8,var(--paper))}
+.ch-num{font-family:var(--display);font-weight:800;font-size:96px;line-height:.8;color:var(--navy);opacity:.14;letter-spacing:-.04em}
+.eyebrow{font:700 11.5px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin:0 0 8px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4vw,42px);line-height:1.1;color:var(--navy);margin:0;letter-spacing:-.01em}
+.deck{font-size:19px;color:var(--muted);margin:12px 0 0;line-height:1.5}
+.body{padding:34px 64px 50px}
+.body>p:first-of-type:not(.nodrop)::first-letter{font-family:var(--display);font-weight:800;font-size:3.6em;float:left;line-height:.82;padding:6px 10px 0 0;color:var(--navy)}
+h3{font-family:var(--display);font-weight:700;font-size:25px;line-height:1.2;color:var(--navy);margin:38px 0 8px}
+h4{font:700 13px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin:26px 0 6px}
+p{margin:12px 0}
+.lead{font-size:20.5px;line-height:1.6;color:#2a3744}
+ul,ol{padding-left:1.3em}li{margin:6px 0}
+strong,b{font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 4px}
+.chip{font:700 11px var(--sans);letter-spacing:.04em;padding:5px 10px;border-radius:99px;background:var(--teal-bg);color:#14565d}
+.chip.g{background:var(--gold-bg);color:#7a5614}
+
+/* caixas */
+.callout{border-radius:12px;padding:18px 22px;margin:26px 0;border:1px solid var(--line);background:#fff;font-size:17px;line-height:1.6}
+.callout .lab{font:800 10.5px var(--sans);letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:6px}
+.callout p{margin:6px 0}
+.callout.concept{background:var(--gold-bg);border-color:#ecd9ac}.callout.concept .lab{color:#8a5f12}
+.callout.teal{background:var(--teal-bg);border-color:#c4dede}.callout.teal .lab{color:#14565d}
+.callout.warn{background:var(--terra-bg);border-color:#ecc9bd}.callout.warn .lab{color:var(--terra)}
+.callout.green{background:var(--green-bg);border-color:#c5dccf}.callout.green .lab{color:var(--green)}
+.think{margin:30px 0;padding:22px 26px;border-radius:14px;background:var(--navy);color:#fff;font-family:var(--display);font-size:22px;line-height:1.35;font-weight:500}
+.think small{display:block;font:700 10.5px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#e3b45a;margin-bottom:8px}
+
+/* texto de apoio */
+.support{margin:34px 0;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}
+.support>header{display:flex;align-items:center;gap:10px;padding:10px 20px;background:var(--navy);color:#fff;font:700 11px var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.support>header i{width:8px;height:8px;border-radius:50%;background:#e3b45a;display:block}
+.support .in{padding:6px 24px 4px;font-size:17px;line-height:1.65}
+.support h5{font:700 17px var(--display);color:var(--navy);margin:16px 0 0}
+.support .src{font:500 12.5px/1.5 var(--sans);color:var(--muted);background:#f5f2ea;border-top:1px solid var(--line);padding:11px 24px}
+.support .src b{color:var(--ink);font-weight:700}
+/* Miniatura 3D do texto de apoio */
+.support .texto1-miniatura{float:right;display:block;width:clamp(135px,27%,225px);margin:16px 0 12px 22px;text-decoration:none;text-align:center;perspective:700px}
+.support .texto1-miniatura img{display:block;width:100%;height:auto;border-radius:8px;border:3px solid #fff;box-shadow:9px 11px 17px rgba(20,35,55,.28),2px 3px 4px rgba(20,35,55,.15);transform:rotateY(-7deg) rotateZ(1deg);transition:transform .2s,box-shadow .2s}
+.support .texto1-miniatura:hover img,.support .texto1-miniatura:focus-visible img{transform:rotateY(0) rotateZ(0) scale(1.03);box-shadow:6px 8px 18px rgba(20,35,55,.3)}
+.support .texto1-miniatura span{display:block;font:600 11px var(--sans);color:var(--navy);margin-top:10px}
+.support .in::after{content:"";display:block;clear:both}
+@media(max-width:520px){.support .texto1-miniatura{width:42%;margin:12px 0 10px 14px}}
+
+/* fonte histórica */
+figure.doc{margin:30px 0;padding:6px 0 6px 26px;border-left:5px solid var(--gold)}
+figure.doc blockquote{margin:0;font-style:italic;font-size:19.5px;line-height:1.55;color:#2e3b47}
+figure.doc figcaption{font:500 12.5px/1.5 var(--sans);color:var(--muted);margin-top:10px}
+figure.doc figcaption b{font-weight:700;color:var(--ink)}
+
+/* números em destaque */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:28px 0}
+.stat{background:#fff;border:1px solid var(--line);border-top:4px solid var(--terra);border-radius:10px;padding:14px 16px}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:34px;line-height:1;color:var(--terra)}
+.stat span{display:block;font:500 12.5px/1.35 var(--sans);color:var(--muted);margin-top:7px}
+
+/* cartões e comparativos */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:24px 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.card .n{font:800 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.card h6{font:700 18px var(--display);color:var(--navy);margin:4px 0 4px}
+.card p{font-size:15.5px;line-height:1.5;margin:4px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.two .callout{margin:0}
+
+.question-image-link{display:block;text-decoration:none;color:var(--ink);cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .2s}
+.question-image-link:hover,.question-image-link:focus-visible{border-color:var(--teal);box-shadow:0 8px 22px -12px #12304a80;transform:translateY(-2px)}
+.question-image-link:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.question-open{display:block;margin-top:12px;font:700 12px/1.4 var(--sans);color:var(--teal)}
+/* linha do tempo */
+.tl{list-style:none;padding:0;margin:30px 0;position:relative}
+.tl:before{content:"";position:absolute;left:96px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--gold),var(--teal));border-radius:2px}
+.tl li{display:grid;grid-template-columns:96px 1fr;gap:0 26px;margin:0 0 20px;position:relative}
+.tl li:before{content:"";position:absolute;left:90px;top:8px;width:15px;height:15px;border-radius:50%;background:var(--paper);border:4px solid var(--navy)}
+.tl .y{font:800 14px var(--sans);color:var(--navy);text-align:right;padding-top:3px;padding-right:22px;font-variant-numeric:tabular-nums}
+.tl .t{padding-left:12px}
+.tl .t b{display:block;font:700 18px var(--display);color:var(--navy)}
+.tl .t span{font-size:16px;color:#3d4a55;line-height:1.5;display:block}
+.tl li.hl:before{background:var(--terra);border-color:var(--terra)}
+.tl li.hl .y{color:var(--terra)}
+
+/* fluxo */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:26px 0;counter-reset:f}
+.flow div{position:relative;background:#fff;border:1px solid var(--line);padding:14px 14px 14px;margin-right:-1px;counter-increment:f}
+.flow div:first-child{border-radius:12px 0 0 12px}.flow div:last-child{border-radius:0 12px 12px 0}
+.flow div:before{content:counter(f);display:block;font:800 11px var(--sans);color:#fff;background:var(--teal);width:22px;height:22px;border-radius:50%;text-align:center;line-height:22px;margin-bottom:8px}
+.flow b{display:block;font:700 16px var(--display);color:var(--navy)}
+.flow span{font-size:14px;line-height:1.4;color:var(--muted);display:block;margin-top:3px}
+
+/* tabelas */
+table.tb{width:100%;border-collapse:collapse;margin:22px 0;font:400 15px/1.5 var(--sans);background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tb th{background:var(--navy);color:#fff;text-align:left;padding:11px 14px;font-weight:700;font-size:13px}
+.tb td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top}
+.tb tr:nth-child(even) td{background:#faf8f2}
+.tb td.fill{height:48px}
+.scroll{overflow-x:auto}
+
+/* atividades */
+.act{margin:34px 0;border:2px solid var(--gold);border-radius:14px;background:#fffdf6;padding:0;overflow:hidden}
+.act>header{background:var(--gold);color:#fff;padding:9px 22px;font:800 11px var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.act .in{padding:16px 24px 20px;font-size:17px}
+.act h3{margin:6px 0 4px;font-size:22px}
+.lines{margin:12px 0}.lines i{display:block;border-bottom:1px solid #b9b5a6;height:30px}
+.act ol{margin:8px 0}
+.act li::marker{font-weight:700;color:var(--gold)}
+
+/* figura */
+figure.fig{margin:28px 0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+figure.fig figcaption{font:500 12.5px/1.5 var(--sans);color:var(--muted);margin-top:8px}
+.ch-end{display:flex;justify-content:space-between;gap:12px;padding:16px 64px;background:#f4f1e8;border-top:1px solid var(--line);font:600 12.5px var(--sans);color:var(--muted)}
+
+/* glossário */
+.gl{columns:2;column-gap:36px}
+.gl dt{font:700 17px var(--display);color:var(--navy);break-after:avoid;margin-top:14px}
+.gl dd{margin:2px 0 0;font-size:16px;line-height:1.55;break-inside:avoid}
+
+/* bibliografia */
+.refs{list-style:none;padding:0;counter-reset:r}
+.refs li{counter-increment:r;position:relative;padding-left:38px;margin:0 0 14px;font:400 14.5px/1.55 var(--sans)}
+.refs li:before{content:counter(r);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--teal-bg);color:#14565d;font:800 12px/26px var(--sans);text-align:center}
+.refs em{font-style:italic}
+details.prof{margin:18px 0;border:1px solid var(--line);border-radius:12px;background:#fff}
+details.prof summary{cursor:pointer;padding:14px 20px;font:700 14px var(--sans);color:var(--navy)}
+details.prof .in{padding:0 22px 16px;font-size:16px}
+.colophon{text-align:center;font:500 12px var(--sans);color:var(--muted);padding:26px 0 60px}
+
+
+/* cidadania: imagem + explicação */
+.cid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:22px;margin:30px 0;align-items:start}
+.cid-fig{margin:0}
+.cid-thumb{position:relative;display:block;width:100%;padding:0;border:2px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;cursor:zoom-in;box-shadow:0 10px 28px -16px #1d273180}
+.cid-thumb img{display:block;width:100%;height:auto}
+.cid-hint{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);background:var(--navy);color:#fff;font:700 12px var(--sans);padding:8px 14px;border-radius:99px;white-space:nowrap;box-shadow:0 4px 14px #0005}
+.cid-thumb:hover .cid-hint,.cid-thumb:focus-visible .cid-hint{background:var(--gold)}
+.cid-thumb:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.cid-fig figcaption b{color:var(--ink)}
+.cid-fig figcaption{font:500 12.5px/1.5 var(--sans);color:var(--muted);margin-top:8px}
+.cid-txt{background:var(--teal-bg);border:1px solid #c4dede;border-radius:14px;padding:20px 24px;font-size:17px;line-height:1.6}
+.cid-txt .lab{font:800 10.5px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#14565d}
+.cid-txt h3{margin:4px 0 8px;font-size:26px}
+.cid-txt p{margin:8px 0}.cid-txt ul{margin:8px 0;padding-left:1.2em}.cid-txt li{margin:6px 0}
+.cid-key{background:#fff;border-left:5px solid var(--gold);border-radius:8px;padding:10px 14px}
+.cid-src{font:500 12px/1.5 var(--sans);color:var(--muted)}
+.cid-link{display:flex;gap:12px;align-items:flex-start;margin-top:12px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;text-decoration:none;color:var(--ink);font-family:var(--sans);transition:border-color .15s,box-shadow .15s}
+.cid-link:hover,.cid-link:focus-visible{border-color:var(--gold);box-shadow:0 6px 18px -10px #1d273190}
+.cid-link .ic{flex:none;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#e3b45a;display:grid;place-items:center;font-size:13px}
+.cid-link .tx{display:block;font-size:12.5px;line-height:1.45;color:var(--muted)}
+.cid-link b{display:block;font-size:13.5px;color:var(--navy);margin-bottom:2px}
+.cid-link em{display:block;font-style:normal;font-weight:700;color:var(--teal);margin-top:4px}
+@media(max-width:760px){.cid{grid-template-columns:1fr}}
+.atv-box{display:flex;align-items:center;gap:18px;margin:0 0 26px;padding:18px 24px;border-radius:14px;background:linear-gradient(100deg,var(--navy),var(--navy2));color:#fff;text-decoration:none;box-shadow:0 12px 28px -16px #12304acc;transition:transform .15s,box-shadow .15s;font-family:var(--sans)}
+.atv-box:hover,.atv-box:focus-visible{transform:translateY(-2px);box-shadow:0 16px 32px -14px #12304a}
+.atv-box:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.atv-ic{flex:none;width:52px;height:52px;border-radius:14px;background:#ffffff1c;border:1px solid #ffffff40;display:grid;place-items:center;font-size:24px;color:#e3b45a}
+.atv-tx{flex:1;display:block;min-width:0}
+.atv-k{display:block;font:800 10.5px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#e3b45a}
+.atv-tx b{display:block;font:700 21px/1.25 var(--display);margin:3px 0 4px}
+.atv-d{display:block;font-size:13.5px;line-height:1.5;color:#d3dee7}
+.atv-go{flex:none;background:#e3b45a;color:var(--navy);font:800 13px var(--sans);padding:11px 18px;border-radius:99px;white-space:nowrap}
+.atv-box:hover .atv-go{background:#fff}
+@media(max-width:640px){.atv-box{flex-wrap:wrap;padding:16px}.atv-go{width:100%;text-align:center}}
+/* carrossel */
+.car{position:relative;outline:none}
+.car:focus-visible .car-view{outline:3px solid var(--gold);outline-offset:2px}
+.car-view{overflow:hidden;border-radius:14px}
+.car-track{display:flex;transition:transform .35s ease;touch-action:pan-y}
+.car-slide{flex:0 0 100%;min-width:0}
+.car-slide .cid-thumb{border-radius:14px}
+.car-nav{position:absolute;top:calc(50% - 22px);width:40px;height:40px;border-radius:50%;border:1px solid #ffffff80;background:#12304acc;color:#fff;font:700 24px/1 var(--sans);cursor:pointer;display:grid;place-items:center;padding:0 0 3px;z-index:2;box-shadow:0 4px 14px #0004}
+.car-nav:hover{background:var(--gold)}
+.car-nav.prev{left:8px}.car-nav.next{right:8px}
+.car-dots{display:flex;justify-content:center;gap:8px;margin-top:10px}
+.car-dot{width:10px;height:10px;border-radius:50%;border:0;padding:0;background:#c9c1ac;cursor:pointer}
+.car-dot.on{background:var(--navy);width:26px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){.car-track{transition:none}}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:#08121cf8;display:none;flex-direction:column}
+.lb.open{display:flex}
+.lb-bar{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:10px 14px;color:#fff;font:600 13px var(--sans)}
+.lb-bar .grp{display:flex;gap:8px;align-items:center}
+.lb-bar button{background:#ffffff1a;border:1px solid #ffffff44;color:#fff;border-radius:9px;min-width:40px;height:40px;font:700 18px var(--sans);cursor:pointer;padding:0 12px}
+.lb-bar button:hover{background:#ffffff33}
+.lb-bar .pct{min-width:52px;text-align:center}
+.lb-stage{flex:1;overflow:auto;display:flex;padding:8px;cursor:grab;-webkit-overflow-scrolling:touch}
+.lb-stage.drag{cursor:grabbing}
+.lb-stage img{margin:auto;max-width:none;flex:none;user-select:none;-webkit-user-drag:none;background:#fff;border-radius:6px}
+.lb-help{text-align:center;color:#9fb3c3;font:500 12px var(--sans);padding:6px 10px 12px}
+
+/* responsivo */
+@media(max-width:1000px){
+  section.chapter,.cover{margin:14px 0;max-width:none}
+  
+  .ch-head{padding:56px 24px 22px;grid-template-columns:1fr;gap:6px}.ch-num{font-size:64px}
+  .body{padding:24px 22px 38px}.ch-end{padding:14px 22px}
+}
+@media(max-width:640px){
+  body{font-size:17px}
+  .two,.gl{grid-template-columns:1fr;columns:1}
+  .flow{grid-template-columns:1fr}.flow div,.flow div:first-child,.flow div:last-child{border-radius:0;margin:0 0 -1px}
+  .tl:before{left:14px}.tl li{grid-template-columns:1fr;padding-left:40px}.tl li:before{left:7px}.tl .y{text-align:left;padding:0}.tl .t{padding:0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.drawer{transition:none}}
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{background:#fff;font-size:11.5pt}
+  .toc-tab,.drawer,.toc-ov,#progress,.skip{display:none!important}
+  main{margin:0}
+  section.chapter,.cover{box-shadow:none;margin:0;max-width:none;page-break-after:always}
+  .cover img{max-height:none}
+  .ch-head{padding:0 0 14px;background:none}.body{padding:14px 0}.ch-end{display:none}
+  .callout,.support,.act,figure,.card,.stat,.tl li{break-inside:avoid}
+  .think,.support>header,.act>header,.tb th,.stat,.callout{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  details.prof{display:none}
+}
+
+.cover-art{line-height:1.3;color:#fff;padding:90px 64px 56px;background:radial-gradient(1200px 500px at 85% -10%,#1f6f78 0%,transparent 60%),linear-gradient(160deg,#12304a,#0c2236);position:relative}
+.cv-k{font:700 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#e3b45a;margin:0 0 18px}
+.cover-art h1{font-family:var(--display);font-weight:800;font-size:clamp(40px,7vw,78px);line-height:1.02;margin:0;letter-spacing:-.02em;color:#fff}
+.cv-sub{font-family:var(--display);font-size:clamp(22px,3vw,32px);font-weight:500;color:#cfe3e6;margin:14px 0 0}
+.cv-fio{max-width:640px;font:400 18px/1.55 var(--serif);color:#e4ecf0;margin:26px 0 0;border-left:4px solid #e3b45a;padding-left:18px}
+.cv-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:44px 0 30px}
+.cv-steps span{font:700 11px var(--sans);letter-spacing:.08em;color:#9fc4cb;border-top:3px solid #e3b45a;padding-top:10px;display:block}
+.cv-steps b{display:block;font:700 18px var(--display);letter-spacing:0;color:#fff;margin-top:4px}
+.cv-foot{font:500 12px var(--sans);letter-spacing:.06em;color:#9fb3c0;margin:0}
+.perguntas-box{margin:24px 0;border:1px solid #c4dede;border-left:6px solid var(--teal);border-radius:12px;background:var(--teal-bg);padding:16px 22px}
+.perguntas-box .lab,.goias-box .lab{font:800 10.5px var(--sans);letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:6px}
+.perguntas-box .lab{color:#14565d}
+.perguntas-box ul{margin:6px 0 0;padding-left:20px}
+.goias-box{margin:30px 0;border:1px solid #ecd9ac;border-left:6px solid var(--gold);border-radius:12px;background:var(--gold-bg);padding:18px 24px;font-size:17px;line-height:1.62}
+.goias-box .lab{color:#8a5f12}
+.goias-box h4{font:700 19px var(--display);color:var(--navy);margin:16px 0 4px}
+.goias-box p{margin:6px 0}
+.seq{margin:26px 0;display:grid;gap:12px}
+.seq-row{display:grid;grid-template-columns:150px 1fr 1fr 1fr;gap:8px;align-items:stretch}
+.seq-l{font:700 14px var(--sans);color:var(--navy);align-self:center}
+.seq-l small{font-weight:500;color:var(--muted)}
+.seq-b{font:700 13.5px/1.35 var(--sans);padding:12px;border-radius:10px;text-align:center;display:flex;align-items:center;justify-content:center}
+.seq-b.c1{background:var(--teal-bg);color:#14565d}.seq-b.c2{background:var(--gold-bg);color:#7a5614}.seq-b.c3{background:var(--terra-bg);color:var(--terra)}
+.ch-end{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:16px 64px;border-top:1px solid var(--line);background:#f4f1e8;font:600 12.5px var(--sans);color:var(--muted)}
+.callout ul,.goias-box ul{margin:6px 0 0;padding-left:20px}
+.tb th,.tb td{vertical-align:top}
+@media(max-width:760px){.cover-art{padding:60px 22px 40px}.cv-steps{grid-template-columns:1fr 1fr}.seq-row{grid-template-columns:1fr}.ch-end{padding:14px 22px}}
+/* ---------- abertura de unidade e extras (8º ano) ---------- */
+.unit-open .ch-head{background:linear-gradient(160deg,var(--navy),#0c2236);color:#fff;border-bottom:0}
+.unit-open .ch-num{color:#e3b45a;opacity:.9}
+.unit-open h2{color:#fff}.unit-open .eyebrow{color:#e3b45a}.unit-open .deck{color:#cfe3e6}
+.cap-list{list-style:none;padding:0;margin:20px 0;display:grid;gap:10px}
+.cap-list a{display:flex;gap:14px;align-items:baseline;background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink);font-family:var(--sans)}
+.cap-list a:hover{border-left-color:var(--teal);box-shadow:0 6px 16px -10px #1d273180}
+.cap-list b{font:800 12px var(--sans);color:var(--teal);letter-spacing:.1em;min-width:34px}
+.cap-list span{font-size:15px;line-height:1.4}
+.cap-list small{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
+.quote-who{font:700 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.mapa{margin:26px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.mapa div{background:#fff;border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:10px;padding:12px 16px;font:400 14.5px/1.5 var(--sans)}
+.mapa div b{display:block;font:700 16px var(--display);color:var(--navy);margin-bottom:3px}
+.mapa div.g{border-top-color:var(--gold)}.mapa div.t{border-top-color:var(--terra)}.mapa div.v{border-top-color:var(--green)}
+.cv-meta{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0}
+.cv-meta span{font:700 11.5px var(--sans);letter-spacing:.06em;border:1px solid #ffffff44;border-radius:99px;padding:6px 12px;color:#dce8ee}
+.cv-units{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:42px 0 28px}
+.cv-units a{text-decoration:none;font:700 11px var(--sans);letter-spacing:.08em;color:#9fc4cb;border-top:3px solid #e3b45a;padding-top:10px;display:block}
+.cv-units b{display:block;font:700 17px var(--display);letter-spacing:0;color:#fff;margin-top:4px;line-height:1.2}
+@media(max-width:760px){.cv-units{grid-template-columns:1fr 1fr}}
+
+/* Livro ilustrado ao lado do título */
+.cv-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,31%);gap:34px;align-items:center}
+.cv-book{display:block;justify-self:center;width:100%;max-width:330px;cursor:zoom-in;text-decoration:none;perspective:1000px;line-height:1.3}
+.cv-book-frame{position:relative;display:block;transform:rotateY(-10deg) rotateZ(2deg);transform-origin:center;filter:drop-shadow(16px 18px 13px #0008);transition:transform .25s ease}
+.cv-book-frame:before{content:"";position:absolute;left:-13px;top:5px;bottom:4px;width:15px;background:linear-gradient(90deg,#071b2b,#305b69,#0a2636);transform:skewY(-10deg);border-radius:4px 0 0 4px}
+.cv-book-frame:after{content:"";position:absolute;left:3px;right:3px;bottom:-10px;height:11px;background:repeating-linear-gradient(0deg,#c5bda9 0 2px,#f7f2e7 2px 3px);transform:skewX(-40deg);transform-origin:top}
+.cv-book-frame img{display:block;width:100%;height:auto;aspect-ratio:1671/940;object-fit:cover;border:2px solid #f2e3c5;border-radius:2px 5px 5px 2px}
+.cv-book:hover .cv-book-frame,.cv-book:focus-visible .cv-book-frame{transform:rotateY(0) rotateZ(0) scale(1.035)}
+.cv-book-label{display:block;text-align:center;margin-top:25px;color:#e3b45a;font:700 12px var(--sans);letter-spacing:.03em}
+.cv-book:focus-visible{outline:3px solid #e3b45a;outline-offset:8px}
+.cv-book-dialog{border:0;background:#091521f7;color:#fff;padding:18px;max-width:none;max-height:none;width:100vw;height:100dvh;margin:0;box-sizing:border-box}
+.cv-book-dialog::backdrop{background:#000d}
+.cv-dialog-tools{display:flex;justify-content:flex-end;gap:10px;align-items:center;font:600 14px var(--sans);margin-bottom:12px}
+.cv-dialog-tools button{border:1px solid #ffffff66;background:#ffffff20;color:#fff;padding:9px 14px;border-radius:8px;cursor:pointer;font:700 16px var(--sans)}
+.cv-dialog-stage{height:calc(100% - 70px);overflow:auto;display:grid;place-items:center}
+.cv-dialog-stage img{display:block;max-width:none;height:auto;object-fit:contain}
+@media(max-width:760px){.cv-hero{grid-template-columns:1fr}.cv-book{max-width:340px;margin:14px auto 0}.cv-book-label{margin-top:22px}}
+@media print{.cv-book-label{display:none}.cv-book-dialog{display:none}}
+
+/* Ações independentes: guia ilustrado e PDF de atividades */
+.question-top{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}
+.question-card{display:flex;flex-direction:column}
+.question-actions{display:inline-flex;align-items:center;gap:5px;margin-left:auto;flex-shrink:0}
+.question-actions a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--teal);border:1px solid #b8d5d6;background:#eff7f7;transition:background .2s,transform .2s}
+.question-actions a:hover{background:#d6ebec;transform:translateY(-2px)}
+.question-actions a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.question-arrow{width:24px;height:24px;border-radius:5px;font:800 16px var(--sans)}
+.question-atv{min-width:32px;height:24px;padding:0 4px;border-radius:5px;font:800 9px var(--sans);letter-spacing:.02em}
+
+/* Atividade no canto inferior direito do box Perguntas para o bimestre */
+.perguntas-topo{display:block}
+.perguntas-topo .lab{margin-top:6px}
+.perguntas-atv{display:flex;align-items:center;gap:6px;width:max-content;margin:14px 0 0 auto;background:var(--navy);color:#fff;text-decoration:none;border-radius:7px;padding:6px 11px;font:800 12px var(--sans);box-shadow:0 3px 8px #12304a25}
+.perguntas-atv span{font-size:17px;line-height:1}
+.perguntas-atv:hover,.perguntas-atv:focus-visible{background:var(--teal);color:#fff}
+.perguntas-atv:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* Ajuste de espaçamento e alinhamento dos três cartões de habilidades */
+#habilidades .cards{gap:22px;}
+#habilidades .question-card{padding:24px 25px 28px;}
+#habilidades .question-top{gap:14px;margin-bottom:14px;}
+#habilidades .question-card h6{margin:0 0 15px;line-height:1.35;}
+#habilidades .question-card p{margin:0;font-size:17px;line-height:1.75;text-align:justify;text-justify:inter-word;hyphens:auto;overflow-wrap:break-word;}
+@media(max-width:640px){#habilidades .question-card{padding:20px;}#habilidades .cards{gap:16px;}}
+
+/* Miniatura cartográfica com perspectiva 3D */
+.mapa-3d-link{display:block;width:min(100%,460px);margin:26px auto 30px;text-decoration:none;color:var(--navy);perspective:1100px;text-align:center}
+.mapa-3d-frame{display:block;position:relative;transform:rotateX(7deg) rotateY(-8deg) rotateZ(-1deg);transform-style:preserve-3d;transition:transform .3s ease,filter .3s ease;filter:drop-shadow(13px 17px 12px #12304a45)}
+.mapa-3d-frame:before{content:"";position:absolute;left:9px;right:-9px;bottom:-12px;height:14px;background:linear-gradient(#a6b8c4,#466578);transform:skewX(-35deg);border-radius:0 0 5px 5px}
+.mapa-3d-frame:after{content:"";position:absolute;right:-12px;top:9px;bottom:-5px;width:13px;background:linear-gradient(90deg,#7895a7,#25465c);transform:skewY(-40deg)}
+.mapa-3d-frame img{display:block;width:100%;height:auto;border:3px solid #fff;border-radius:5px;position:relative;z-index:1;box-shadow:0 0 0 1px #a9b8c0}
+.mapa-3d-link:hover .mapa-3d-frame,.mapa-3d-link:focus-visible .mapa-3d-frame{transform:rotateX(0) rotateY(0) rotateZ(0) scale(1.025)}
+.mapa-3d-link:focus-visible{outline:3px solid var(--gold);outline-offset:8px}
+.mapa-3d-caption{display:block;margin-top:22px;font:700 12px/1.5 var(--sans);color:var(--teal)}
+@media(max-width:640px){.mapa-3d-link{width:min(100%,390px)}}
+@media print{.mapa-3d-frame{transform:none;filter:none}.mapa-3d-caption{display:none}}
+
+/* Mapa miniatura 3D ao lado direito do título da abertura */
+#abertura .abertura-head{grid-template-columns:auto minmax(0,1fr);align-items:center}
+#abertura .abertura-intro{display:grid;grid-template-columns:minmax(0,1fr) 205px;gap:22px;align-items:center;min-width:0}
+#abertura .abertura-texto{min-width:0}
+#abertura .mapa-3d-link{width:100%;max-width:205px;margin:0;justify-self:end}
+#abertura .mapa-3d-caption{margin-top:12px;font-size:10px;line-height:1.4}
+@media(max-width:760px){#abertura .abertura-head{grid-template-columns:1fr}#abertura .abertura-intro{grid-template-columns:minmax(0,1fr) 145px;gap:12px}#abertura .mapa-3d-link{max-width:145px}}
+@media(max-width:480px){#abertura .abertura-intro{grid-template-columns:1fr}#abertura .mapa-3d-link{max-width:200px;justify-self:center;margin-top:12px}}
+
+/* Mapa político atual: miniatura 3D com texto contornando */
+#mapa-politico-atual{float:right;width:185px;max-width:38%;margin:4px 0 16px 26px;text-align:center;text-decoration:none;perspective:850px;position:relative;z-index:1}
+#mapa-politico-atual .mapa-atual-moldura{display:block;transform:rotateY(-9deg) rotateX(5deg);transform-origin:center;transition:transform .25s ease;filter:drop-shadow(9px 11px 8px #12304a55)}
+#mapa-politico-atual img{display:block;width:100%;height:auto;border:3px solid white;border-radius:5px;box-shadow:3px 3px 0 #718b9a;background:white}
+#mapa-politico-atual:hover .mapa-atual-moldura,#mapa-politico-atual:focus-visible .mapa-atual-moldura{transform:rotateY(0) rotateX(0) scale(1.04)}
+#mapa-politico-atual .mapa-atual-legenda{display:block;margin-top:10px;font:700 11px/1.35 var(--sans);color:var(--teal)}
+#mapa-politico-atual:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+@media(max-width:480px){#mapa-politico-atual{width:135px;max-width:43%;margin-left:16px}}
+@media print{#mapa-politico-atual .mapa-atual-moldura{transform:none;filter:none}}
+
+/* Mapa visual das quatro palavras-chave */
+.mapavisual-link{display:block;margin:22px 0 28px;text-decoration:none;color:var(--teal);border-radius:12px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px -18px #12304a70;transition:transform .2s,box-shadow .2s}
+.mapavisual-link img{display:block;width:100%;height:auto}
+.mapavisual-link span{display:block;padding:9px 14px;text-align:center;font:700 12px/1.5 var(--sans)}
+.mapavisual-link:hover{transform:translateY(-2px);box-shadow:0 12px 26px -14px #12304a70}
+.mapavisual-link:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media print{.mapavisual-link{box-shadow:none}.mapavisual-link span{display:none}}
+
+.timeline-3d-link + .tl::after{content:"";display:block;clear:both}
+/* Infográfico 3D maior, abaixo do título e alinhado ao texto da cronologia */
+.timeline-title-row{display:block;margin-top:38px}
+.timeline-title-row h3{margin:0 0 14px}
+.timeline-3d-link{display:block;float:right;width:245px;max-width:42%;margin:14px 0 22px 26px;perspective:900px;text-decoration:none;cursor:zoom-in;position:relative;z-index:1}
+.timeline-3d-frame{display:block;transform:rotateY(-9deg) rotateX(4deg);transition:transform .25s ease;filter:drop-shadow(10px 13px 9px #12304a55)}
+.timeline-3d-frame img{display:block;width:100%;height:auto;border:3px solid #fff;border-radius:5px;box-shadow:4px 4px 0 #6c8493;background:#fff}
+.timeline-3d-link:hover .timeline-3d-frame,.timeline-3d-link:focus-visible .timeline-3d-frame{transform:rotateY(0) rotateX(0) scale(1.035)}
+.timeline-3d-link:focus-visible{outline:3px solid var(--gold);outline-offset:6px}
+.timeline-title-row::after{content:"";display:table;clear:both}
+@media(max-width:600px){.timeline-3d-link{width:185px;max-width:46%;margin:12px 0 18px 18px}}
+@media print{.timeline-3d-frame{transform:none;filter:none}}
+
+/* Quadrinho ilustrado 3D à esquerda do primeiro box Para pensar */
+.think-comic-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:center;margin:30px 0}
+.think-comic-row .think{margin:0}
+.think-comic-link{display:block;width:100%;perspective:900px;text-decoration:none;cursor:zoom-in}
+.think-comic-frame{display:block;transform:rotateY(10deg) rotateX(4deg);transition:transform .25s ease;filter:drop-shadow(8px 12px 7px #12304a55)}
+.think-comic-frame img{display:block;width:100%;height:auto;border:3px solid white;border-radius:7px;box-shadow:-4px 4px 0 #718b9a;background:#fff}
+.think-comic-link:hover .think-comic-frame,.think-comic-link:focus-visible .think-comic-frame{transform:rotateY(0) rotateX(0) scale(1.04)}
+.think-comic-link:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+@media(max-width:520px){.think-comic-row{grid-template-columns:105px minmax(0,1fr);gap:12px}.think-comic-row .think{padding:15px;font-size:17px}}
+@media print{.think-comic-frame{transform:none;filter:none}.think-comic-row{break-inside:avoid}}
+
+/* Miniatura 3D à esquerda das perguntas orientadoras do capítulo 1 */
+.perguntas-visual-row{display:grid;grid-template-columns:160px minmax(0,1fr);gap:20px;align-items:center;margin:24px 0}
+.perguntas-visual-row .perguntas-box{margin:0;min-width:0}
+.perguntas-visual-link{display:block;perspective:950px;text-decoration:none;cursor:zoom-in;min-width:0}
+.perguntas-visual-frame{display:block;transform:rotateY(10deg) rotateX(5deg);transition:transform .25s ease;filter:drop-shadow(9px 13px 8px #12304a60)}
+.perguntas-visual-frame img{display:block;width:100%;height:auto;border:3px solid white;border-radius:7px;box-shadow:-5px 5px 0 #718b9a;background:#fff}
+.perguntas-visual-link:hover .perguntas-visual-frame,.perguntas-visual-link:focus-visible .perguntas-visual-frame{transform:rotateY(0) rotateX(0) scale(1.04)}
+.perguntas-visual-link:focus-visible{outline:3px solid var(--gold);outline-offset:6px}
+@media(max-width:600px){.perguntas-visual-row{grid-template-columns:110px minmax(0,1fr);gap:12px}.perguntas-visual-row .perguntas-box{padding:12px 14px;font-size:15px}}
+@media print{.perguntas-visual-frame{transform:none;filter:none}.perguntas-visual-row{break-inside:avoid}}
+
+/* Imagem 3D incorporada ao próprio box de perguntas do capítulo 1 */
+.perguntas-box-com-imagem{display:grid;grid-template-columns:150px minmax(0,1fr);align-items:center;gap:22px;padding:20px 24px}
+.perguntas-box-com-imagem .perguntas-visual-link{width:100%;align-self:center}
+.perguntas-box-com-imagem .perguntas-conteudo{min-width:0}
+.perguntas-box-com-imagem .perguntas-conteudo ul{margin-top:8px}
+@media(max-width:600px){.perguntas-box-com-imagem{grid-template-columns:105px minmax(0,1fr);gap:13px;padding:15px}.perguntas-box-com-imagem .perguntas-conteudo{font-size:15px}}
+@media(max-width:420px){.perguntas-box-com-imagem{grid-template-columns:1fr}.perguntas-box-com-imagem .perguntas-visual-link{width:140px;justify-self:center}}
+
+/* Quadrinho 3D dentro do próprio box Para pensar */
+.think-comic-inside{display:grid;grid-template-columns:155px minmax(0,1fr);gap:24px;align-items:center;padding:22px 26px}
+.think-comic-inside .think-comic-link{width:100%;min-width:0}
+.think-comic-inside .think-comic-text{min-width:0}
+@media(max-width:520px){.think-comic-inside{grid-template-columns:105px minmax(0,1fr);gap:14px;padding:16px;font-size:17px}}
+@media(max-width:390px){.think-comic-inside{grid-template-columns:1fr}.think-comic-inside .think-comic-link{width:145px;justify-self:center}}
+@media print{.think-comic-inside{break-inside:avoid}}
+
+/* Primeira Revolução Industrial: miniatura 3D com texto contornando */
+#primeira-revolucao-mapa{float:right;width:215px;max-width:42%;margin:6px 0 18px 25px;perspective:900px;text-decoration:none;position:relative;z-index:1;cursor:zoom-in}
+#primeira-revolucao-mapa .primeira-moldura{display:block;transform:rotateY(-9deg) rotateX(5deg);transition:transform .25s ease;filter:drop-shadow(9px 12px 8px #12304a55)}
+#primeira-revolucao-mapa img{display:block;width:100%;height:auto;border:3px solid white;border-radius:6px;box-shadow:4px 4px 0 #718b9a;background:#fff}
+#primeira-revolucao-mapa:hover .primeira-moldura,#primeira-revolucao-mapa:focus-visible .primeira-moldura{transform:rotateY(0) rotateX(0) scale(1.04)}
+#primeira-revolucao-mapa:focus-visible{outline:3px solid var(--gold);outline-offset:6px}
+#primeira-revolucao-mapa .primeira-legenda{display:block;margin-top:12px;text-align:center;font:700 11px/1.4 var(--sans);color:var(--teal)}
+@media(max-width:480px){#primeira-revolucao-mapa{width:150px;max-width:45%;margin-left:15px}}
+@media print{#primeira-revolucao-mapa .primeira-moldura{transform:none;filter:none}}
+
+/* Carrossel de mapas e miniatura da Segunda Revolução Industrial */
+.primeira-carrossel{float:right;width:215px;max-width:42%;margin:6px 0 18px 25px;position:relative;z-index:1}
+.primeira-carrossel #primeira-revolucao-mapa{float:none;width:100%;max-width:none;margin:0;display:block}
+.primeira-controles{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:5px}
+.primeira-controles button{border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:8px;cursor:pointer;font:700 18px var(--sans);padding:3px 12px}
+.primeira-controles button:hover,.primeira-controles button:focus-visible{background:var(--navy);color:#fff}
+.primeira-contador{font:700 12px var(--sans);color:var(--teal)}
+.segunda-miniatura{float:left;width:190px;max-width:40%;margin:7px 23px 15px 0;perspective:900px;text-decoration:none;display:block;position:relative}
+.segunda-miniatura img{display:block;width:100%;height:auto;border:3px solid white;border-radius:7px;box-shadow:5px 6px 0 #718b9a;transform:rotateY(9deg) rotateX(4deg);filter:drop-shadow(8px 10px 7px #12304a55);transition:transform .25s ease}
+.segunda-miniatura:hover img,.segunda-miniatura:focus-visible img{transform:none}
+.segunda-miniatura:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.segunda-miniatura span{display:block;text-align:center;font:700 11px var(--sans);color:var(--teal);margin-top:10px}
+@media(max-width:480px){.primeira-carrossel{width:150px;max-width:45%;margin-left:15px}.segunda-miniatura{width:135px;max-width:43%;margin-right:15px}}
+@media print{.segunda-miniatura img{transform:none;filter:none}.primeira-controles{display:none}}
+.palavras-titulo{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:38px}.palavras-titulo h3{margin:0}.palavras-atv{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;text-decoration:none;background:var(--navy);color:white;border-radius:8px;padding:7px 13px;font:800 12px var(--sans);box-shadow:0 4px 10px #12304a30}.palavras-atv span{font-size:18px}.palavras-atv:hover,.palavras-atv:focus-visible{background:var(--teal);color:#fff}.palavras-atv:focus-visible{outline:3px solid var(--gold);outline-offset:3px}@media(max-width:480px){.palavras-titulo{gap:8px}.palavras-titulo h3{font-size:21px}.palavras-atv{padding:6px 10px}}
+
+/* Guia de estudo: cartão horizontal, imagem à direita */
+.guia4{display:block;min-width:0;flex:1;align-self:stretch;margin:0;padding:20px 24px;border:1px solid #c5d9e5;border-left:6px solid var(--teal);border-radius:15px;background:linear-gradient(130deg,#f0f7fa,#fff9ed);box-shadow:0 10px 22px #12304a14}
+.guia4-top{display:flex;flex-direction:column;align-items:flex-start;gap:17px;min-width:0}
+.guia4 h3{margin:0;color:var(--navy);font-size:clamp(21px,3vw,27px)}
+.guia4-sub{font:600 12px var(--sans);color:var(--teal);letter-spacing:.07em;margin:6px 0 0}
+.guia4-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.guia4-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9px 14px;border-radius:8px;background:var(--navy);color:white!important;text-decoration:none;font:800 12px var(--sans);box-shadow:0 3px 8px #12304a25}
+.guia4-btn:hover,.guia4-btn:focus-visible{background:var(--teal);color:white}
+.guia4-btn.arrow{font-size:21px;padding:5px 13px}
+.guia4-btn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.guia4-visual{display:block;width:185px;flex:0 0 185px;text-align:center;text-decoration:none;perspective:950px}
+.guia4-visual img{display:block;width:100%;height:auto;border:3px solid #fff;border-radius:8px;box-shadow:9px 12px 17px #12304a40;transform:rotateY(-5deg) rotateX(2deg);transition:transform .25s}
+.guia4-visual:hover img{transform:none}
+.guia4-hint{display:block;font:700 10px/1.4 var(--sans);color:var(--teal);margin-top:12px}
+@media(max-width:480px){.guia4{padding:14px}.guia4 h3{font-size:20px}.guia4-sub{font-size:10px}.guia4-btn{padding:7px 10px}.guia4-visual{width:115px;flex-basis:115px}.guia4-hint{font-size:9px}}
+@media print{.guia4-actions,.guia4-hint{display:none}.guia4-visual img{transform:none}}
+.guia4-row{display:flex;align-items:stretch;gap:22px;margin:28px 0;width:100%}
+.guia4-row .guia4-visual{align-self:center}
+@media(max-width:600px){.guia4-row{gap:12px}}
+
+/* Guia de Estudo: faixa até a borda direita, com imagem sobreposta */
+.guia4-row{position:relative;display:block;width:100%;min-height:260px;margin:28px 0;isolation:isolate}
+.guia4-row .guia4{box-sizing:border-box;display:block;width:100%;min-height:260px;padding:32px 260px 32px 26px;position:relative;z-index:1}
+.guia4-row .guia4-top{max-width:100%}
+.guia4-row .guia4-visual{position:absolute;z-index:3;right:18px;top:50%;width:190px;transform:translateY(-50%);display:block;filter:drop-shadow(5px 9px 7px #12304a33)}
+.guia4-row .guia4-visual img{width:100%;height:auto}
+@media(max-width:640px){.guia4-row{min-height:230px}.guia4-row .guia4{min-height:230px;padding:20px 145px 20px 16px}.guia4-row .guia4-visual{width:115px;right:12px}.guia4-row .guia4-hint{font-size:9px}}
+@media(max-width:380px){.guia4-row .guia4{padding-right:125px}.guia4-row .guia4-visual{width:100px;right:8px}}
+
+/* Revisão: box de largura total e infográfico maior, sobreposto à direita */
+.guia4-row{min-height:350px;margin-top:32px;margin-bottom:34px}
+.guia4-row .guia4{min-height:350px;padding:32px 340px 32px 30px}
+.guia4-row .guia4-visual{width:270px;right:22px}
+.guia4-resumo{max-width:730px;margin:20px 0 0;color:#28475b;font-size:clamp(14px,1.4vw,17px);line-height:1.7}
+.guia4-resumo strong{color:#064d77}
+@media(max-width:760px){.guia4-row{min-height:300px}.guia4-row .guia4{min-height:300px;padding:22px 210px 22px 20px}.guia4-row .guia4-visual{width:170px;right:14px}.guia4-resumo{font-size:13px;line-height:1.5}}
+@media(max-width:480px){.guia4-row{min-height:360px}.guia4-row .guia4{min-height:360px;padding:16px 142px 16px 14px}.guia4-row .guia4-visual{width:118px;right:8px}.guia4-resumo{font-size:12px;line-height:1.45;margin-top:12px}}
+
+/* Ajuste final: imagem externamente à borda do box, sobreposta à direita e alinhada à página */
+.guia4-row{position:relative;width:100%;min-height:365px;margin:34px 0 46px;overflow:visible;isolation:isolate}
+.guia4-row .guia4{width:100%;min-height:365px;box-sizing:border-box;padding:32px clamp(270px,34%,410px) 32px 30px;position:relative;z-index:1}
+.guia4-row .guia4-visual{position:absolute;z-index:5;top:50%;right:-2px;width:clamp(220px,31%,340px);transform:translateY(-50%) translateX(0);margin:0;align-self:auto;display:block}
+.guia4-row .guia4-visual img{display:block;width:100%;height:auto;max-height:410px;object-fit:contain;transform:perspective(900px) rotateY(-4deg);filter:drop-shadow(7px 12px 9px rgba(0,0,0,.25))}
+.guia4-row .guia4-visual:hover img{transform:perspective(900px) rotateY(0deg) scale(1.03)}
+.guia4-row .guia4-hint{text-align:center;font-size:10px;margin-top:7px}
+@media(max-width:760px){.guia4-row{min-height:320px}.guia4-row .guia4{min-height:320px;padding:20px 40% 20px 18px}.guia4-row .guia4-visual{width:37%;right:0}}
+@media(max-width:480px){.guia4-row{min-height:360px}.guia4-row .guia4{min-height:360px;padding:18px 39% 18px 14px}.guia4-row .guia4-visual{width:36%;right:0}.guia4-row .guia4-resumo{font-size:12px;line-height:1.42}}
+
+/* Guia de Estudo — composição horizontal conforme referência, cores originais */
+.guia4-row{position:relative;display:block;width:100%;min-height:0;margin:26px 0 34px;isolation:isolate}
+.guia4-row .guia4{position:relative;width:100%;min-height:240px;box-sizing:border-box;padding:26px 30px 26px 260px;border-radius:18px;background:linear-gradient(130deg,#f0f7fa,#fff9ed);border:1px solid #c5d9e5;border-left:6px solid var(--teal);z-index:1}
+.guia4-row .guia4-visual{position:absolute;top:50%;left:28px;right:auto;width:205px;z-index:3;transform:translateY(-50%);margin:0;filter:none}
+.guia4-row .guia4-visual img{width:100%;height:auto;max-height:unset;object-fit:contain;border:3px solid #fff;border-radius:10px;transform:perspective(900px) rotateY(-4deg);box-shadow:7px 11px 18px #12304a35;filter:none}
+.guia4-row .guia4-visual:hover img{transform:perspective(900px) rotateY(0deg) scale(1.025)}
+.guia4-row .guia4-hint{display:none}
+.guia4-row .guia4-top{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:15px}
+.guia4-row .guia4-resumo{max-width:none;margin:14px 0 0;font-size:clamp(14px,1.4vw,16px);line-height:1.65}
+@media(max-width:760px){.guia4-row .guia4{min-height:210px;padding:18px 18px 18px 188px}.guia4-row .guia4-visual{left:18px;width:150px}.guia4-row .guia4-top{align-items:flex-start;flex-wrap:wrap}.guia4-row .guia4-resumo{font-size:13px;line-height:1.5}}
+@media(max-width:520px){.guia4-row .guia4{min-height:0;padding:18px 15px 18px 135px}.guia4-row .guia4-visual{left:12px;width:108px}.guia4-row .guia4 h3{font-size:19px}.guia4-row .guia4-sub{font-size:10px}.guia4-row .guia4-resumo{font-size:12px;line-height:1.45}.guia4-row .guia4-btn{padding:7px 10px}}
+</style>
+<style id="guia4-layout-fix">
+/* O guia deve ser irmão, e não filho, da grade da linha do tempo. */
+.guia4-row{display:grid;grid-template-columns:210px minmax(0,1fr);align-items:center;gap:26px;width:100%;min-height:0;margin:26px 0 34px;position:relative;isolation:auto}
+.guia4-row .guia4{grid-column:1/-1;grid-row:1;width:100%;min-height:0;padding:26px 30px 26px 260px;box-sizing:border-box;position:relative;border-radius:18px;background:linear-gradient(130deg,#f0f7fa,#fff9ed);border:1px solid #c5d9e5;border-left:6px solid var(--teal)}
+.guia4-row .guia4-visual{grid-column:1;grid-row:1;position:relative;left:auto;right:auto;top:auto;transform:none;width:205px;max-width:100%;z-index:2;justify-self:center;align-self:center;margin:0 0 0 18px}
+.guia4-row .guia4-visual img{width:100%;height:auto;max-height:260px;object-fit:contain}
+.guia4-row .guia4-top{display:flex;flex-direction:row;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.guia4-row .guia4-resumo{max-width:100%;margin:14px 0 0;font-size:clamp(14px,1.4vw,16px);line-height:1.6}
+@media(max-width:760px){.guia4-row{grid-template-columns:140px minmax(0,1fr);gap:12px}.guia4-row .guia4{padding:20px 18px 20px 175px}.guia4-row .guia4-visual{width:135px;margin-left:12px}.guia4-row .guia4-top{align-items:flex-start}.guia4-row .guia4 h3{font-size:22px}}
+@media(max-width:540px){.guia4-row{display:flex;flex-direction:column;align-items:stretch;gap:0}.guia4-row .guia4{padding:20px 18px;order:2}.guia4-row .guia4-visual{order:1;position:relative;top:auto;left:auto;right:auto;transform:none;margin:0 auto -12px;width:140px}.guia4-row .guia4-top{flex-direction:row;align-items:center}.guia4-row .guia4 h3{font-size:22px}.guia4-row .guia4-resumo{font-size:14px;line-height:1.55}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<div id="progress" aria-hidden="true"></div>
+<main id="conteudo">
+<section class="cover" id="capa">
+  <div class="cover-art">
+    <p class="cv-k">História · 8º ano · 4º bimestre · Ensino Fundamental</p>
+    <div class="cv-hero">
+      <div class="cv-hero-text">
+        <h1>O Mundo Partilhado</h1>
+        <p class="cv-sub">Imperialismo, neocolonialismo e resistência</p>
+        <p class="cv-fio">Entre 1870 e 1914, um punhado de países industrializados dividiu a África e boa parte da Ásia e da Oceania. Por que fizeram isso? O que disseram para justificar? Quem resistiu? E que ideias herdadas dessa época ainda aparecem hoje em estereótipos e preconceitos?</p>
+      </div>
+      <a class="cv-book" href="img/capa.webp" id="abrirLivroCapa" target="_blank" rel="noopener noreferrer" aria-label="Abrir capa ilustrada em nova aba">
+        <span class="cv-book-frame"><img src="img/capa.webp" alt="Capa ilustrada de O Mundo Partilhado" loading="eager"></span>
+        <span class="cv-book-label">↗ Clique para abrir em nova aba</span>
+      </a>
+    </div>
+    <div class="cv-steps">
+      <span>CAPÍTULO 1<b>Do capitalismo ao imperialismo</b></span>
+      <span>CAPÍTULO 2<b>Justificar a dominação</b></span>
+      <span>CAPÍTULOS 3 E 4<b>A partilha da África e da Ásia</b></span>
+      <span>CAPÍTULO 5<b>Eurocentrismo e saberes</b></span>
+    </div>
+    <div class="cv-meta"><span>GO-EF08HI23-A</span><span>GO-EF08HI24-A</span><span>GO-EF08HI27-B</span><span>Matriz de Habilidades Essenciais</span></div>
+    <p class="cv-foot" style="margin-top:34px">LIVRO DIGITAL · COLÉGIO ESTADUAL RODOLFO DE OLIVEIRA · CERO · 2026</p>
+  </div>
+</section>
+
+<section class="chapter" id="habilidades">
+  <header class="ch-head"><div class="ch-num">H</div><div>
+    <p class="eyebrow">Antes de começar · 4º bimestre</p><h2>Habilidades e objetivos</h2>
+    <p class="deck">O que a Matriz de Habilidades Essenciais pede neste bimestre e onde cada habilidade é trabalhada no livro.</p></div></header>
+  <div class="body">
+    <h3 style="margin-top:0">Três habilidades, três perguntas</h3>
+    <div class="cards">
+      <div class="card question-card"><div class="question-top"><span class="n">GO-EF08HI24-A</span><div class="question-actions"><a class="question-arrow" href="img/ge1.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir guia ilustrado da pergunta 1 em nova aba" title="Abrir guia ilustrado">↗</a><a class="question-atv" href="https://drive.google.com/file/d/1Q5PuMFBlDibZxO3bbBRtXhHOOxtVmLuN/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF da atividade 1 em nova aba" title="Abrir PDF da atividade 1">ATV</a></div></div><h6>Por quê?</h6><p>Que relação existe entre o capitalismo industrial, o imperialismo e o neocolonialismo, e por que as nações europeias queriam ampliar seus domínios.</p></div>
+      <div class="card question-card"><div class="question-top"><span class="n">GO-EF08HI23-A</span><div class="question-actions"><a class="question-arrow" href="img/ge2.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir guia ilustrado da pergunta 2 em nova aba" title="Abrir guia ilustrado">↗</a><a class="question-atv" href="https://drive.google.com/file/d/1zaJKw8snpNjwBmyB1sRJjg_t2EtjQa8j/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF da atividade 2 em nova aba" title="Abrir PDF da atividade 2">ATV</a></div></div><h6>Com que justificativas?</h6><p>Que ideias, como o darwinismo social, o racismo e a “missão civilizatória”, foram usadas para justificar a dominação da África e da Ásia.</p></div>
+      <div class="card question-card"><div class="question-top"><span class="n">GO-EF08HI27-B</span><div class="question-actions"><a class="question-arrow" href="img/ge3.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir guia ilustrado da pergunta 3 em nova aba" title="Abrir guia ilustrado">↗</a><a class="question-atv" href="https://drive.google.com/file/d/1wHx8v2sXIQTYmFNM1WaV-Eulw7b8mbJL/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF da atividade 3 em nova aba" title="Abrir PDF da atividade 3">ATV</a></div></div><h6>E o que sobrou disso hoje?</h6><p>Como o eurocentrismo criou estereótipos sobre africanos e indígenas, e por que é preciso valorizar os saberes de diferentes culturas.</p></div>
+    </div>
+
+    <h3>DC-GO Ampliado e Matriz de Habilidades Essenciais</h3>
+    <div class="scroll"><table class="tb">
+      <thead><tr><th style="width:52%">DC-GO Ampliado</th><th>Matriz de Habilidades Essenciais</th></tr></thead>
+      <tbody>
+        <tr><td><b>(GO-EF08HI23-A) Discutir</b> as justificativas para o domínio neocolonial na África e Ásia, analisando teorias, como Darwinismo Social, Etnocentrismo, Racismo, Missão Civilizatória, relacionando esses conceitos com os casos de intolerância, presentes nos dias atuais.</td>
+            <td><b>Entender</b> o contexto da expansão imperialista europeia no século XIX e a disputa por territórios na África e na Ásia e as justificativas ideológicas do domínio.</td></tr>
+        <tr><td><b>(GO-EF08HI24-A) Compreender</b> o imperialismo e caracterizar o neocolonialismo como práticas relacionadas à expansão do capitalismo industrial a partir do século XIX, analisando as razões e interesses das nações europeias na exploração da África, Ásia e Oceania.</td>
+            <td><b>Compreender</b> a conexão entre imperialismo, neocolonialismo e capitalismo industrial e como as nações europeias ampliaram seus domínios.</td></tr>
+        <tr><td><b>(GO-EF08HI27-B) Problematizar</b> a utilização de estereótipos e preconceitos em relação aos povos africanos e indígenas, suas culturas, saberes, tradições e conhecimentos científicos, como forma de predomínio do conhecimento eurocêntrico.</td>
+            <td><b>Analisar</b> o papel do eurocentrismo na construção de estereótipos e preconceitos históricos contra africanos e indígenas, identificando suas influências nos dias atuais.<br><br><b>Compreender</b> os conhecimentos de diferentes culturas, a fim de respeitar saberes e tradições.</td></tr>
+      </tbody></table></div>
+
+
+    <h3>Onde cada habilidade é trabalhada</h3>
+    <div class="scroll"><table class="tb">
+      <thead><tr><th>Habilidade essencial</th><th>Capítulos</th><th>O que você vai fazer</th></tr></thead>
+      <tbody>
+        <tr><td>Compreender a conexão entre imperialismo, neocolonialismo e capitalismo industrial</td><td><a href="#cap1">1</a>, <a href="#cap3">3</a> e <a href="#cap4">4</a></td><td>Ligar a Segunda Revolução Industrial, a concentração de capitais e a busca por matérias-primas e mercados à conquista de territórios.</td></tr>
+        <tr><td>Entender o contexto da expansão e as justificativas ideológicas do domínio</td><td><a href="#cap2">2</a>, <a href="#cap3">3</a> e <a href="#cap4">4</a></td><td>Analisar o darwinismo social, o racismo e a “missão civilizatória” e acompanhar a disputa por territórios na África e na Ásia.</td></tr>
+        <tr><td>Analisar o eurocentrismo e os estereótipos contra africanos e indígenas</td><td><a href="#cap2">2</a> e <a href="#cap5">5</a></td><td>Reconhecer como imagens e ideias criadas no século XIX ainda aparecem hoje.</td></tr>
+        <tr><td>Compreender conhecimentos de diferentes culturas para respeitar saberes e tradições</td><td><a href="#cap5">5</a></td><td>Conhecer saberes africanos e indígenas e o papel deles na história e em Goiás.</td></tr>
+      </tbody></table></div>
+
+    <div class="callout teal"><span class="lab">Neste livro você vai aprender</span>
+      <ul>
+        <li>o que foi a Segunda Revolução Industrial e por que ela empurrou as potências para outros continentes;</li>
+        <li>o que significam imperialismo, neocolonialismo, etnocentrismo, eurocentrismo, darwinismo social e “missão civilizatória”;</li>
+        <li>como a África e a Ásia foram partilhadas e como os povos dominados resistiram;</li>
+        <li>por que a ideia de “raças superiores” não tem base científica, mas deixou marcas de racismo e intolerância;</li>
+        <li>como respeitar e valorizar os saberes de diferentes culturas, em especial africanas e indígenas.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="abertura">
+  <header class="ch-head abertura-head"><div class="ch-num">I</div><div class="abertura-intro">
+    <div class="abertura-texto"><p class="eyebrow">Para começar</p><h2>Quem desenhou o mapa do mundo?</h2>
+    <p class="deck">Em 1880, os europeus controlavam cerca de 10% da África. Em 1900, cerca de 90%. O que aconteceu nesses vinte anos?</p></div>
+    <a class="mapa-3d-link" href="img/mapa.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir mapa da África em 1880 e 1914 em nova aba">
+      <span class="mapa-3d-frame"><img src="img/mapa.webp" alt="Mapa comparativo da África em 1880 e 1914, mostrando a expansão colonial europeia" loading="lazy"></span>
+      <span class="mapa-3d-caption">↗ África em 1880 e 1914 · Clique no mapa para abrir em nova aba</span>
+    </a></div></header>
+  <div class="body">
+    <a id="mapa-politico-atual" href="img/mapa2.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir mapa político atual da África em nova aba" title="Abrir mapa político atual da África">
+      <span class="mapa-atual-moldura"><img src="img/mapa2.webp" alt="Mapa político atual da África, com países e fronteiras" loading="lazy"></span>
+      <span class="mapa-atual-legenda">↗ África — mapa político atual</span>
+    </a>
+    <p class="lead">Olhe para um mapa político da África de hoje e repare nas fronteiras: muitas são linhas retas, traçadas a régua. Elas não nasceram de rios, montanhas ou da história dos povos que ali viviam. Foram combinadas em salas na Europa, por quem nunca tinha pisado naquelas terras. Este livro conta como isso foi possível, o que se dizia para justificar e como os povos africanos e asiáticos reagiram.</p>
+
+
+
+    <div class="perguntas-box"><div class="perguntas-topo"><span class="lab">Perguntas para o bimestre</span></div>
+      <ul>
+        <li>Por que potências industrializadas passaram a disputar territórios na África, na Ásia e na Oceania?</li>
+        <li>Que ideias foram usadas para dizer que dominar outros povos era “natural” ou até um “dever”?</li>
+        <li>Que estereótipos sobre africanos e indígenas nasceram nessa época e ainda circulam hoje?</li>
+        <li>Que saberes desses povos foram deixados de lado, e por que vale a pena conhecê-los?</li>
+      </ul>
+      <a class="perguntas-atv" href="https://drive.google.com/file/d/1AgcJokqbB-egL8YGOGDoZAv-5g2iL0qv/view?usp=sharing" target="_blank" rel="noopener noreferrer" title="Abrir atividade em nova aba" aria-label="Abrir ATV em nova aba"><span aria-hidden="true">↗</span> ATV</a>
+    </div>
+
+    <div class="palavras-titulo"><h3>Quatro palavras-chave</h3><a class="palavras-atv" href="https://drive.google.com/file/d/1M5gYHyYA2nKl1fXzxskj9FOMo6eTXlMM/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Abrir atividade ATV em nova aba" title="Abrir atividade em PDF"><span aria-hidden="true">↗</span> ATV</a></div>
+    <a class="mapavisual-link" href="img/mapavisual2.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir mapa visual completo em nova aba" title="Clique para abrir o mapa visual completo">
+      <img src="img/mapavisual.webp" alt="Mapa visual: imperialismo, neocolonialismo, etnocentrismo e eurocentrismo" loading="lazy">
+      <span>↗ Clique na imagem para abrir o mapa visual completo em nova aba</span>
+    </a>
+
+    <div class="think think-comic-inside">
+      <a class="think-comic-link" href="img/comic1.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir quadrinho sobre a missão civilizatória em nova aba" title="Clique para abrir o quadrinho em nova aba">
+        <span class="think-comic-frame"><img src="img/comic1.webp" alt="Quadrinho sobre a ideia de levar a civilização e a ausência de consulta aos povos dominados" loading="lazy"></span>
+      </a>
+      <div class="think-comic-text"><small>Para pensar</small>Quando um país diz que vai “levar a civilização” a outro, quem decidiu o que é civilização? E quem foi consultado?</div>
+    </div>
+
+    <div class="timeline-title-row">
+      <h3>O bimestre em uma linha do tempo</h3>
+    </div>
+    <a class="timeline-3d-link" href="img/info1.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir infográfico da linha do tempo em nova aba" title="Clique para ampliar a linha do tempo em nova aba">
+        <span class="timeline-3d-frame"><img src="img/info1.webp" alt="Infográfico ilustrado: O bimestre em uma linha do tempo" loading="lazy"></span>
+    </a>
+    <ul class="tl">
+      <li><div class="y">c. 1830</div><div class="t"><b>Franceses na Argélia</b><span>Começa a conquista do norte da África.</span></div></li>
+      <li><div class="y">1839–42</div><div class="t"><b>Primeira Guerra do Ópio</b><span>A Inglaterra impõe a abertura da China.</span></div></li>
+      <li class="hl"><div class="y">1857</div><div class="t"><b>Revolta dos Sipaios</b><span>Indianos se levantam contra o domínio britânico.</span></div></li>
+      <li><div class="y">1870</div><div class="t"><b>Corrida imperialista</b><span>As potências industriais disputam colônias e áreas de influência.</span></div></li>
+      <li class="hl"><div class="y">1884–85</div><div class="t"><b>Conferência de Berlim</b><span>Potências europeias combinam as regras da ocupação da África.</span></div></li>
+      <li><div class="y">1890–1900</div><div class="t"><b>Rebelião Ashanti</b><span>Dez anos de resistência na Costa do Ouro, hoje Gana.</span></div></li>
+      <li><div class="y">1896</div><div class="t"><b>Batalha de Adwa</b><span>A Etiópia derrota a Itália e mantém a independência.</span></div></li>
+      <li><div class="y">1899–1901</div><div class="t"><b>Guerra dos Boxers</b><span>Revolta na China e intervenção de potências estrangeiras.</span></div></li>
+    </ul>
+
+    <h3>O que vem pela frente</h3>
+    <figure class="fig" style="padding:8px;margin:20px 0 26px">
+      <img src="img/infocapitulos.webp" alt="Infográfico com os cinco capítulos: Do capitalismo ao imperialismo; Justificar a dominação; A partilha da África; A partilha da Ásia e da Oceania; Eurocentrismo e saberes." loading="lazy" style="display:block;width:100%;height:auto;border-radius:8px">
+    </figure>
+  </div>
+  <div class="ch-end"><span>Abertura</span><span>Próximo: Do capitalismo ao imperialismo →</span></div>
+</section>
+
+<section class="chapter" id="cap1">
+  <header class="ch-head"><div class="ch-num">1</div><div>
+    <p class="eyebrow">A partir de 1870 · Capitalismo industrial</p><h2>Do capitalismo industrial ao imperialismo</h2>
+    <p class="deck">Por que fábricas na Europa e nos Estados Unidos acabaram levando exércitos para a África e a Ásia.</p></div></header>
+  <div class="body">
+    <div class="chips"><span class="chip">GO-EF08HI24-A</span><span class="chip">Matriz: conexão entre imperialismo, neocolonialismo e capitalismo industrial</span><span class="chip g">Segunda Revolução Industrial · Imperialismo · Neocolonialismo</span></div>
+<p class="lead">Para entender a partilha do mundo é preciso começar pela fábrica. A partir de 1870, a indústria produzia mais do que os mercados da Europa conseguiam consumir, os grandes empresários acumulavam capitais que precisavam de novos investimentos e as fábricas exigiam cada vez mais matérias-primas. A solução que as potências encontraram foi buscar terras, recursos e consumidores em outros continentes. Esse movimento tem nome: <b>imperialismo</b>.</p>
+
+<div class="perguntas-box perguntas-box-com-imagem">
+  <a class="perguntas-visual-link" href="img/mapavisual3.webp" target="_blank" rel="noopener noreferrer" title="Abrir imagem em nova aba" aria-label="Abrir mapa visual do imperialismo em nova aba">
+    <span class="perguntas-visual-frame"><img src="img/mapavisual3.webp" alt="Mapa visual sobre as causas da expansão imperialista" loading="lazy"></span>
+  </a>
+  <div class="perguntas-conteudo">
+    <span class="lab">Perguntas orientadoras</span>
+    <ul>
+      <li>O que mudou na indústria na segunda metade do século XIX?</li>
+      <li>Como a concentração de capitais e a crise de 1873 aproximaram a economia da política de conquista?</li>
+      <li>O que as potências buscavam na África, na Ásia e na Oceania?</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Lembrando: a Primeira Revolução Industrial</h3>
+<div class="primeira-carrossel" aria-label="Carrossel de imagens da Primeira Revolução Industrial">
+  <a id="primeira-revolucao-mapa" href="img/mapa1.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir mapa conceitual da Primeira Revolução Industrial em nova aba" title="Clique para ampliar a imagem em uma nova aba">
+    <span class="primeira-moldura"><img id="primeira-imagem-atual" src="img/mapa1.webp" alt="Mapa conceitual ilustrado sobre a Primeira Revolução Industrial" loading="lazy"></span>
+    <span class="primeira-legenda">↗ Clique para ampliar em nova aba</span>
+  </a>
+  <div class="primeira-controles"><button type="button" id="primeira-anterior" aria-label="Imagem anterior">‹</button><span class="primeira-contador" id="primeira-contador" aria-live="polite">1 / 2</span><button type="button" id="primeira-proxima" aria-label="Próxima imagem">›</button></div>
+</div>
+<p>A Revolução Industrial começou na Inglaterra, na segunda metade do século XVIII, com máquinas a vapor, fábricas, trabalho assalariado e produção voltada ao lucro. A indústria têxtil de algodão foi a primeira a se mecanizar, e o algodão usado era barato em parte porque vinha de áreas escravistas, como o sul dos Estados Unidos e o Brasil. Essa primeira fase deu à Inglaterra a posição de “oficina do mundo”, mas ela chegou a seus limites quando outros países começaram a se industrializar também.</p>
+
+<h3>A Segunda Revolução Industrial</h3>
+<a class="segunda-miniatura" href="img/rev2.webp" target="_blank" rel="noopener noreferrer" title="Abrir ilustração da Segunda Revolução Industrial em nova aba" aria-label="Abrir imagem da Segunda Revolução Industrial em nova aba"><img src="img/rev2.webp" alt="Ilustração das inovações da Segunda Revolução Industrial" loading="lazy"><span>↗ Clique para ampliar</span></a>
+<p>Ao longo do século XIX, o capitalismo se expandiu pelo mundo, liderado pela Europa, pelos Estados Unidos e pelo Japão. Surgiu uma nova fase da industrialização, caracterizada por novas tecnologias aplicadas na indústria, nos transportes e nas comunicações. A ciência e os laboratórios de pesquisa passaram a ter papel central, e apareceu a produção em massa de bens padronizados.</p>
+<div class="cards">
+  <div class="card"><span class="n">1856 · Aço</span><h6>Processo Bessemer</h6><p>O aço, mais resistente e mais fácil de trabalhar que o ferro, ficou barato e passou a ser usado em armas, máquinas e construção civil.</p></div>
+  <div class="card"><span class="n">1870 e 1879 · Eletricidade</span><h6>Dínamo e lâmpada</h6><p>O dínamo gerou eletricidade que podia ser transmitida a longas distâncias. A lâmpada elétrica de Thomas Edison levou a energia às casas.</p></div>
+  <div class="card"><span class="n">Década de 1870 · Petróleo</span><h6>Motor de combustão interna</h6><p>Permitiu o uso do petróleo e de derivados, como gasolina e diesel, como fonte de energia.</p></div>
+  <div class="card"><span class="n">Transportes e comunicações</span><h6>Trem, vapor, telégrafo e telefone</h6><p>Ferrovias e navios a vapor aproximaram regiões. O telégrafo (Samuel Morse, 1836), o cabo transatlântico (c. 1866) e o telefone (1876) aceleraram os negócios.</p></div>
+</div>
+
+<aside class="support"><header><i></i>Texto de apoio · Capital em busca de investimento</header>
+  <div class="in">
+    <a class="texto1-miniatura" href="img/texto1.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem do texto Capital em busca de investimento em nova aba" title="Abrir imagem em nova aba"><img src="img/texto1.webp" alt="Ilustração do texto de apoio sobre capital em busca de investimento" loading="lazy"><span>↗ Abrir imagem em nova aba</span></a>
+    <p>Havia para tanto duas razões convergentes. A primeira foi a crescente industrialização do resto do mundo, criando um mercado em rápido crescimento para aquele tipo de bens de capital […]. A segunda razão, entretanto, pouco tinha a ver com o crescimento da demanda: foi a pressão das cada vez mais vastas acumulações de capital para investimento lucrativo, ilustrado à perfeição pela construção das estradas de ferro.</p>
+  </div>
+  <div class="src"><b>Fonte:</b> HOBSBAWM, Eric John. <em>Da Revolução Industrial inglesa ao imperialismo</em>. Rio de Janeiro: Forense Universitária, 2000. p. 101-102. Trecho citado em BOULOS JÚNIOR, Alfredo, <em>História: Sociedade &amp; Cidadania, 8º ano</em>. São Paulo: FTD, 2022.</div>
+</aside>
+
+<style>
+.jornal2-miniatura{float:right;display:block;width:205px;max-width:38%;margin:6px 0 16px 24px;perspective:850px;text-decoration:none;position:relative;z-index:1}
+.jornal2-miniatura img{display:block;width:100%;height:auto;border-radius:7px;box-shadow:9px 11px 16px rgba(0,0,0,.25);transform:rotateY(-7deg) rotateZ(1deg);transition:transform .25s,box-shadow .25s}
+.jornal2-miniatura:hover img{transform:rotateY(0) rotateZ(0) scale(1.04);box-shadow:12px 14px 22px rgba(0,0,0,.3)}
+@media(max-width:520px){.jornal2-miniatura{width:145px;max-width:44%;margin-left:14px}}
+.palavras-titulo{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:38px}.palavras-titulo h3{margin:0}.palavras-atv{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;text-decoration:none;background:var(--navy);color:white;border-radius:8px;padding:7px 13px;font:800 12px var(--sans);box-shadow:0 4px 10px #12304a30}.palavras-atv span{font-size:18px}.palavras-atv:hover,.palavras-atv:focus-visible{background:var(--teal);color:#fff}.palavras-atv:focus-visible{outline:3px solid var(--gold);outline-offset:3px}@media(max-width:480px){.palavras-titulo{gap:8px}.palavras-titulo h3{font-size:21px}.palavras-atv{padding:6px 10px}}
+</style>
+<h3>Concentração de capital: poucos donos de tudo</h3>
+<a class="jornal2-miniatura" href="img/jornal2.webp" target="_blank" rel="noopener noreferrer" title="Abrir jornal em nova aba"><img src="img/jornal2.webp" alt="Jornal ilustrado sobre a concentração de capitais" loading="lazy"></a>
+
+<p>Com a industrialização, a concorrência entre as empresas ficou feroz. Os grandes capitalistas faziam <b>guerra de preços</b>: mantinham os preços muito baixos por um tempo, até que os concorrentes falissem ou vendessem a empresa por pouco. Assim, as empresas mais fortes foram “engolindo” as mais fracas e formaram gigantes ou associações de empresas: os <b>trustes</b>, os <b>cartéis</b> e as <b>holdings</b>. Os bancos também ganharam enorme poder, ao financiar indústrias, e chegaram a influenciar governos. A aproximação entre bancos e indústrias deu origem ao chamado <b>capitalismo financeiro</b>.</p>
+<p>Esse poder pode ser visto em uma charge alemã de 1903 que mostra os “reis” da indústria dos Estados Unidos: Andrew Carnegie, o rei do aço; Pierpont Morgan, o rei das finanças; e Rockefeller, o rei do petróleo, cuja empresa, a Standard Oil, refinava 84% do petróleo cru do país em 1900.</p>
+<div class="callout concept"><span class="lab">Conceitos-chave</span>
+  <p><b>Truste:</b> fusão de empresas do mesmo ramo para dominar o mercado e eliminar a concorrência.</p>
+  <p><b>Cartel:</b> acordo entre empresas independentes para combinar preços e dividir mercados.</p>
+  <p><b>Holding:</b> empresa que controla várias outras por meio da posse de suas ações.</p>
+  <p><b>Protecionismo:</b> proteção da indústria nacional por meio de impostos sobre produtos estrangeiros.</p></div>
+
+<style>
+.comic2-miniatura{float:left;display:block;width:245px;max-width:43%;margin:8px 25px 17px 0;perspective:900px;text-decoration:none;position:relative;z-index:1;cursor:zoom-in}
+.comic2-miniatura img{display:block;width:100%;height:auto;border-radius:9px;box-shadow:9px 12px 20px rgba(0,0,0,.26);transform:rotateY(7deg) rotateZ(-1deg);transition:transform .25s ease,box-shadow .25s ease}
+.comic2-miniatura:hover img,.comic2-miniatura:focus-visible img{transform:rotateY(0) rotateZ(0) scale(1.035);box-shadow:11px 15px 24px rgba(0,0,0,.3)}
+@media(max-width:520px){.comic2-miniatura{width:175px;max-width:48%;margin:6px 15px 12px 0}}
+.palavras-titulo{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:38px}.palavras-titulo h3{margin:0}.palavras-atv{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;text-decoration:none;background:var(--navy);color:white;border-radius:8px;padding:7px 13px;font:800 12px var(--sans);box-shadow:0 4px 10px #12304a30}.palavras-atv span{font-size:18px}.palavras-atv:hover,.palavras-atv:focus-visible{background:var(--teal);color:#fff}.palavras-atv:focus-visible{outline:3px solid var(--gold);outline-offset:3px}@media(max-width:480px){.palavras-titulo{gap:8px}.palavras-titulo h3{font-size:21px}.palavras-atv{padding:6px 10px}}
+</style>
+<h3>Crise de 1873 e corrida por mercados</h3>
+<a class="comic2-miniatura" href="img/comic2.webp" target="_blank" rel="noopener noreferrer" title="Abrir quadrinhos em nova aba" aria-label="Abrir quadrinhos sobre a crise de 1873 em nova aba"><img src="img/comic2.webp" alt="História em quadrinhos: crise de 1873 e corrida por mercados" loading="lazy"></a>
+<p>A partir de 1873 a oferta de mercadorias passou a superar a procura. Começou uma longa depressão, que durou cerca de vinte anos. A crise indicou saídas: o monopólio e o protecionismo. A Alemanha, a França, os Estados Unidos e, por fim, até a Grã-Bretanha adotaram medidas protecionistas para se defender da concorrência. O livre-comércio, tão defendido pelos liberais, perdeu força, e aumentaram os nacionalismos e as rivalidades entre as potências. Era preciso garantir mercados e fontes de matérias-primas fora das fronteiras, de preferência controlados por cada país.</p>
+
+<style>
+.flowchart2-miniatura{float:right!important;display:block;width:235px;max-width:40%;margin:5px 0 15px 23px;text-decoration:none;perspective:900px}
+.flowchart2-texto{display:flow-root;display:block;text-align:justify;}
+.flowchart2-texto + p{clear:both;}
+.flowchart2-miniatura img{display:block;width:100%;height:auto;border-radius:8px;box-shadow:8px 11px 17px rgba(0,0,0,.26);transform:rotateY(-7deg) rotateZ(1deg);transition:transform .25s,box-shadow .25s}
+.flowchart2-miniatura:hover img,.flowchart2-miniatura:focus-visible img{transform:rotateY(0) rotateZ(0) scale(1.04);box-shadow:10px 13px 21px rgba(0,0,0,.32)}
+@media(max-width:540px){.flowchart2-miniatura{width:175px;max-width:45%;margin-left:13px}}
+.palavras-titulo{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:38px}.palavras-titulo h3{margin:0}.palavras-atv{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;text-decoration:none;background:var(--navy);color:white;border-radius:8px;padding:7px 13px;font:800 12px var(--sans);box-shadow:0 4px 10px #12304a30}.palavras-atv span{font-size:18px}.palavras-atv:hover,.palavras-atv:focus-visible{background:var(--teal);color:#fff}.palavras-atv:focus-visible{outline:3px solid var(--gold);outline-offset:3px}@media(max-width:480px){.palavras-titulo{gap:8px}.palavras-titulo h3{font-size:21px}.palavras-atv{padding:6px 10px}}
+</style>
+<h3>O que é imperialismo e neocolonialismo?</h3>
+<a class="flowchart2-miniatura" href="img/flowchart2.webp" target="_blank" rel="noopener noreferrer" title="Abrir fluxograma em nova aba" aria-label="Abrir fluxograma sobre imperialismo e neocolonialismo em nova aba"><img src="img/flowchart2.webp" alt="Fluxograma ilustrado: imperialismo e neocolonialismo, causas e interesses das potências" loading="lazy"></a>
+<p class="flowchart2-texto">A partir de 1870, as potências capitalistas, como Estados Unidos, Grã-Bretanha, França e Japão, entraram numa disputa por colônias ou áreas de influência, principalmente na África e na Ásia. Essa expansão capitalista com o objetivo de dominação é chamada de <b>imperialismo</b> ou <b>neocolonialismo</b>. Os historiadores costumam chamar de “era do imperialismo” o período de 1870 a 1914.</p>
+<p>As grandes potências se voltaram para esses lugares em busca de:</p>
+<div class="mapa">
+  <div><b>Investimentos</b>Oportunidades para aplicar capitais, como em ferrovias, portos e minas.</div>
+  <div class="g"><b>Matérias-primas</b>Cobre, carvão, ferro, borracha, algodão, entre outras.</div>
+  <div class="t"><b>Consumidores</b>Mercados para os produtos industrializados.</div>
+  <div class="v"><b>Riquezas minerais</b>Ouro e diamantes, por exemplo, nas terras africanas.</div>
+  <div><b>Terras e mão de obra</b>Trabalhadores baratos ou forçados para minas e plantações de café, açúcar, amendoim, cacau e outros produtos.</div>
+</div>
+<p>Os governos incentivavam a conquista e usavam essas ações para despertar o “orgulho nacional” entre os cidadãos. Como você verá no capítulo seguinte, essa expansão veio acompanhada de teorias que diziam que os europeus eram superiores aos povos que dominavam.</p>
+
+<div class="callout warn"><span class="lab">Atenção ao termo</span>
+  <p>Alguns estudiosos usam <b>neocolonialismo</b> para dizer “novo colonialismo”, a fim de diferenciar a dominação do século XIX da colonização da época mercantilista, como a do Brasil colonial. Neste livro, imperialismo e neocolonialismo aparecem como a expansão capitalista do século XIX com objetivo de dominação.</p></div>
+
+<style>
+.comp1-externa{display:flex;justify-content:center;margin:18px auto 22px;max-width:100%}
+.comp1-externa a{display:block;width:min(100%,580px);perspective:900px;cursor:zoom-in}
+.comp1-externa img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:9px 12px 22px rgba(0,0,0,.3);transform:rotateY(-4deg) rotateZ(.5deg);transition:transform .25s ease,box-shadow .25s ease}
+.comp1-externa a:hover img,.comp1-externa a:focus-visible img{transform:none;box-shadow:11px 15px 25px rgba(0,0,0,.35)}
+@media(max-width:600px){.comp1-externa a{width:95%}}
+.palavras-titulo{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:38px}.palavras-titulo h3{margin:0}.palavras-atv{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;text-decoration:none;background:var(--navy);color:white;border-radius:8px;padding:7px 13px;font:800 12px var(--sans);box-shadow:0 4px 10px #12304a30}.palavras-atv span{font-size:18px}.palavras-atv:hover,.palavras-atv:focus-visible{background:var(--teal);color:#fff}.palavras-atv:focus-visible{outline:3px solid var(--gold);outline-offset:3px}@media(max-width:480px){.palavras-titulo{gap:8px}.palavras-titulo h3{font-size:21px}.palavras-atv{padding:6px 10px}}
+</style>
+<div class="scroll"><table class="tb">
+  <thead><tr><th></th><th>Colonização mercantilista (séculos XVI a XVIII)</th><th>Neocolonialismo (a partir de 1870)</th></tr></thead>
+  <tbody>
+    <tr><td><b>Base econômica</b></td><td>Mercantilismo, comércio e metais preciosos</td><td>Capitalismo industrial e financeiro</td></tr>
+    <tr><td><b>O que se buscava</b></td><td>Produtos tropicais e metais para a metrópole</td><td>Matérias-primas para a indústria, mercados consumidores e áreas de investimento</td></tr>
+    <tr><td><b>Quem dominava</b></td><td>Reinos como Portugal e Espanha</td><td>Potências industriais, como Grã-Bretanha, França, Alemanha, Bélgica, Estados Unidos e Japão</td></tr>
+    <tr><td><b>Formas de domínio</b></td><td>Colônias de exploração e povoamento</td><td>Colônias, protetorados, domínios e áreas de influência</td></tr>
+  </tbody></table></div>
+<div class="comp1-externa"><a href="img/comp1.webp" target="_blank" rel="noopener noreferrer" title="Abrir comparação ilustrada em nova aba"><img src="img/comp1.webp" alt="Comparação ilustrada entre colonialismo mercantilista e neocolonialismo" loading="lazy"></a></div>
+
+<style>
+.mapa3-miniatura{float:right;width:210px;max-width:42%;margin:5px 0 14px 20px;display:block;text-decoration:none;cursor:zoom-in;perspective:850px}
+.mapa3-miniatura img{width:100%;height:auto;display:block;border-radius:9px;box-shadow:7px 9px 16px rgba(0,0,0,.32);transform:rotateY(-7deg) rotateZ(1deg);transition:transform .25s ease,box-shadow .25s ease}
+.mapa3-miniatura:hover img,.mapa3-miniatura:focus-visible img{transform:rotateY(0) rotateZ(0) scale(1.04);box-shadow:9px 12px 20px rgba(0,0,0,.38)}
+.goias-box::after{content:"";display:block;clear:both}
+@media(max-width:480px){.mapa3-miniatura{width:145px;max-width:45%;margin-left:12px}}
+.palavras-titulo{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:38px}.palavras-titulo h3{margin:0}.palavras-atv{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;text-decoration:none;background:var(--navy);color:white;border-radius:8px;padding:7px 13px;font:800 12px var(--sans);box-shadow:0 4px 10px #12304a30}.palavras-atv span{font-size:18px}.palavras-atv:hover,.palavras-atv:focus-visible{background:var(--teal);color:#fff}.palavras-atv:focus-visible{outline:3px solid var(--gold);outline-offset:3px}@media(max-width:480px){.palavras-titulo{gap:8px}.palavras-titulo h3{font-size:21px}.palavras-atv{padding:6px 10px}}
+</style>
+<div class="goias-box"><span class="lab">Brasil e Goiás nessa história</span>
+  <a class="mapa3-miniatura" href="img/mapa3.webp" target="_blank" rel="noopener noreferrer" title="Abrir mapa Brasil e Goiás em nova aba" aria-label="Abrir mapa Brasil e Goiás em nova aba"><img src="img/mapa3.webp" alt="Mapa ilustrado das relações comerciais do Brasil e da chegada da ferrovia a Goiás" loading="lazy"></a>
+  <p>O Brasil não foi partilhado como a África, mas fez parte desse mundo. Vendia produtos primários, como café e borracha, e comprava manufaturados. Capitais ingleses financiaram ferrovias e portos no país. Em Goiás, as ferrovias só chegaram no início do século XX, quando já faziam parte desse mesmo movimento de expansão do capitalismo, que ligava o interior ao comércio internacional.</p>
+</div>
+
+<div class="think think-comic-inside"><a class="think-comic-link" href="img/comic3.webp" target="_blank" rel="noopener noreferrer" title="Abrir charge Quem decide? em nova aba" aria-label="Abrir charge Quem decide? em nova aba"><span class="think-comic-frame"><img src="img/comic3.webp" alt="Charge histórica Quem decide? sobre decisões industriais e exploração colonial" loading="lazy"></span></a><div class="think-comic-text"><small>Para pensar</small>Quando uma fábrica na Inglaterra precisa de borracha, algodão ou cobre, quem decide como esses recursos serão obtidos e quem trabalhará para extraí-los? Essa pergunta ajuda a entender o imperialismo.</div></div>
+
+<style>
+.timeline-info2-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,43%);align-items:center;gap:28px;margin:18px 0 30px}
+.timeline-info2-layout .tl{margin:12px 0}
+.timeline-info2-link{display:block;perspective:1000px;text-decoration:none;cursor:zoom-in}
+.timeline-info2-link img{display:block;width:100%;height:auto;border-radius:10px;border:3px solid #fff;box-shadow:10px 14px 24px rgba(0,0,0,.28);transform:rotateY(-7deg) rotateX(3deg);transition:transform .25s ease,box-shadow .25s ease}
+.timeline-info2-link:hover img,.timeline-info2-link:focus-visible img{transform:rotateY(0) rotateX(0) scale(1.025);box-shadow:12px 16px 28px rgba(0,0,0,.35)}
+@media(max-width:800px){.timeline-info2-layout{grid-template-columns:1fr}.timeline-info2-link{max-width:620px;margin:auto}}
+@media print{.timeline-info2-layout{display:block}.timeline-info2-link{max-width:65%;margin:16px auto}.timeline-info2-link img{transform:none}}
+.palavras-titulo{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:38px}.palavras-titulo h3{margin:0}.palavras-atv{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;text-decoration:none;background:var(--navy);color:white;border-radius:8px;padding:7px 13px;font:800 12px var(--sans);box-shadow:0 4px 10px #12304a30}.palavras-atv span{font-size:18px}.palavras-atv:hover,.palavras-atv:focus-visible{background:var(--teal);color:#fff}.palavras-atv:focus-visible{outline:3px solid var(--gold);outline-offset:3px}@media(max-width:480px){.palavras-titulo{gap:8px}.palavras-titulo h3{font-size:21px}.palavras-atv{padding:6px 10px}}
+</style>
+<div class="timeline-info2-layout">
+<ul class="tl">
+  <li><div class="y">1856</div><div class="t"><b>Processo Bessemer</b><span>Aço barato para indústria, armas e ferrovias.</span></div></li>
+  <li><div class="y">1870</div><div class="t"><b>Dínamo</b><span>Eletricidade em escala industrial.</span></div></li>
+  <li class="hl"><div class="y">1873</div><div class="t"><b>Início de longa depressão</b><span>Queda da procura, falências e concentração de capitais.</span></div></li>
+  <li><div class="y">1876</div><div class="t"><b>Telefone</b><span>Comunicações mais rápidas.</span></div></li>
+  <li><div class="y">1879</div><div class="t"><b>Lâmpada elétrica</b><span>Eletricidade nas casas.</span></div></li>
+  <li class="hl"><div class="y">1870–1914</div><div class="t"><b>Era do imperialismo</b><span>Corrida por colônias na África, na Ásia e na Oceania.</span></div></li>
+</ul>
+<a class="timeline-info2-link" href="img/info2.webp" target="_blank" rel="noopener noreferrer" title="Abrir infográfico de inovações, crises e imperialismo em nova aba" aria-label="Abrir infográfico da linha do tempo em nova aba"><img src="img/info2.webp" alt="Infográfico: inovações, crises e imperialismo entre 1856 e 1914" loading="lazy"></a>
+</div>
+<div class="guia4-row">
+<aside class="guia4" aria-label="Guia de Estudo - Revisão">
+  <div class="guia4-top">
+    <div><h3>Guia de Estudo - Revisão</h3><p class="guia4-sub">IMPERIALISMO E A PARTILHA DA ÁFRICA · 8º ANO</p></div>
+    <div class="guia4-actions">
+      <a class="guia4-btn" href="https://drive.google.com/file/d/1PMRtoVS4GXqi_DL13QSjsAEnU8D7oFaf/view?usp=sharing" target="_blank" rel="noopener noreferrer" title="Abrir atividade de revisão no Google Drive"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/><path d="M13 3h8v8"/><path d="m10 14 11-11"/></svg> ATV</a>
+    </div>
+  </div>
+  <p class="guia4-resumo">Revise como a industrialização europeia impulsionou a expansão imperialista no século XIX. A busca por <strong>matérias-primas, mercados consumidores e poder internacional</strong> favoreceu a conquista de territórios africanos. A Conferência de Berlim (1884–1885) estabeleceu regras para a ocupação europeia da África, sem participação dos povos africanos. O domínio colonial provocou exploração, perda de autonomia e imposição de fronteiras.</p>
+</aside>
+  <a class="guia4-visual" href="img/ge4.webp" target="_blank" rel="noopener noreferrer" title="Abrir imagem ampliada em nova aba">
+    <img src="img/ge4.webp" alt="Guia de estudo ilustrado: Imperialismo e a Partilha da África" loading="lazy">
+    <span class="guia4-hint">↗ Clique na imagem para ampliar em nova aba</span>
+  </a>
+</div>
+
+  <div class="ch-end"><span>Capítulo 1 de 5</span><span>Próximo: Justificar a dominação →</span></div>
+</section>
+
+<section class="chapter" id="cap2">
+  <header class="ch-head"><div class="ch-num">2</div><div>
+    <p class="eyebrow">Século XIX · Ideias a serviço do poder</p><h2>Justificar a dominação: darwinismo social, racismo e “missão civilizatória”</h2>
+    <p class="deck">Que ideias os europeus usaram para dizer que conquistar outros povos era natural, correto e até um dever, e por que elas estão erradas.</p></div></header>
+  <div class="body">
+    <div class="chips"><span class="chip">GO-EF08HI23-A</span><span class="chip">Matriz: justificativas ideológicas do domínio</span><span class="chip g">Etnocentrismo · Darwinismo social · Racismo · Missão civilizatória</span></div>
+<p class="lead">Conquistar terras e subjugar povos choca com valores que a Europa dizia defender: liberdade, igualdade e fraternidade, herdados da Revolução Francesa. Como justificar, então, a dominação? As potências recorreram a um conjunto de ideias que davam à conquista ares de ciência e de bondade. Entender essas ideias é essencial, porque elas não ficaram no século XIX: marcas delas ainda aparecem em preconceitos e em casos de intolerância de hoje.</p>
+
+<div class="perguntas-box"><span class="lab">Perguntas orientadoras</span>
+  <ul>
+    <li>O que é etnocentrismo e como ele se relaciona com o eurocentrismo?</li>
+    <li>O que dizia o darwinismo social e por que ele é considerado racista?</li>
+    <li>O que a ciência de hoje diz sobre a ideia de “raças” humanas?</li>
+  </ul>
+</div>
+
+<h3>Do etnocentrismo ao eurocentrismo</h3>
+<p>Todo grupo humano tende a achar que seus costumes, sua língua e sua religião são “normais”. Quando essa tendência vira o hábito de julgar todas as outras culturas pelos padrões da própria, chama-se <b>etnocentrismo</b>. Quando os padrões usados são os da Europa, e a história, a ciência e o “progresso” passam a ser medidos a partir dela, fala-se em <b>eurocentrismo</b>.</p>
+<div class="callout concept"><span class="lab">Conceitos-chave</span>
+  <p><b>Etnocentrismo:</b> ver o mundo a partir da própria cultura e considerá-la superior às demais.</p>
+  <p><b>Eurocentrismo:</b> etnocentrismo de origem europeia, que coloca a Europa como centro da história e modelo de civilização.</p>
+  <p><b>Estereótipo:</b> imagem simplificada e preconceituosa que se repete sobre um grupo, sem considerar sua diversidade.</p></div>
+<p>No século XIX, o eurocentrismo ganhou força porque a Europa estava no auge do poder industrial e militar. Muitos europeus concluíram que, por terem máquinas, ferrovias e armas melhores, eram mais “evoluídos” em tudo. Esquecia-se que a vantagem era econômica e militar e que ela tinha causas históricas, e não biológicas.</p>
+
+<h3>Darwinismo social</h3>
+<p>Enquanto ocorria a corrida imperialista, pensadores europeus se apropriaram das conclusões do naturalista inglês Charles Darwin sobre a evolução das espécies e as estenderam para as sociedades humanas. Afirmaram que as “raças” humanas passam por uma longa evolução e que só as mais aptas sobrevivem. Na luta pela vida, as “raças superiores” triunfariam. Essas teorias ficaram conhecidas como <b>darwinismo social</b>.</p>
+<p>Para os darwinistas sociais, a sociedade mais evoluída seria a branca, europeia, urbana e industrial. Nos níveis mais baixos estariam as sociedades negras da África, as asiáticas e as indígenas da América. A teoria se apoiava em duas ideias equivocadas: a de que existem raças humanas e a de que a “raça branca” é superior às demais. No século XIX, porém, o darwinismo social foi considerado científico e serviu para justificar a dominação imperialista.</p>
+<div class="callout warn"><span class="lab">Cuidado</span>
+  <p>O darwinismo social <b>não</b> é a teoria de Darwin. Darwin estudou a evolução biológica das espécies. Foram outros autores que, de forma distorcida, aplicaram a ideia de “sobrevivência dos mais aptos” a povos e culturas para justificar desigualdades e conquistas.</p></div>
+
+<h3>A “missão civilizatória”</h3>
+<p>Com base nessas teorias, líderes europeus diziam ter o dever de “civilizar” os outros povos: levar a eles o progresso e os “bons” costumes, isto é, os valores europeus. Era a <b>missão civilizatória</b>. Em 1899, o poeta britânico Rudyard Kipling resumiu essa ideia na expressão “o fardo do homem branco”, como se dominar outros povos fosse um sacrifício feito para o bem deles.</p>
+<figure class="doc"><blockquote>“As raças superiores têm um direito perante as raças inferiores. […] As raças superiores têm o dever de civilizar as inferiores.”</blockquote>
+  <figcaption><b>Jules Ferry</b> (1832-1893), ministro francês, em discurso no Parlamento da França. Citado em MESGRAVIS, Laima. <em>A colonização da África e da Ásia</em>. São Paulo: Atual, 1994. (História geral em documentos).</figcaption></figure>
+<div class="think"><small>Para pensar</small>Segundo o ministro Jules Ferry, o “direito” de uma raça sobre outra vinha de um “dever”. Quem criou esse dever? E quem lucrava com ele?</div>
+
+<h3>Racialismo e racismo</h3>
+<p>O filósofo Tzvetan Todorov chamou de <b>racialismo</b> o conjunto de doutrinas sobre as “raças humanas”, nascidas na Europa Ocidental e que, no século XIX, chegaram a ter estatuto de ciência. Elas se baseavam em ideias como: as raças existem; as diferenças físicas determinam as diferenças culturais e morais; e há uma hierarquia entre raças. Quando essas ideias são usadas para tratar pessoas de forma desigual, tem-se o <b>racismo</b>.</p>
+
+<h3>O que a ciência diz hoje</h3>
+<p>Hoje se sabe que não existem raças humanas do ponto de vista genético ou biológico: só existe a espécie humana, e nenhum povo é superior a outro. As diferenças entre as sociedades têm a ver com história, geografia, economia e relações de poder, e não com a cor da pele ou traços do corpo. Os cientistas Sérgio Pena e Telma Birchal lembram, porém, que o conceito de raça tem <b>existência social</b>: ele continua sendo usado para classificar e discriminar pessoas, e daí vem o racismo, ou seja, a transformação da diferença em desigualdade.</p>
+
+<h3>Ideias do passado, intolerância no presente</h3>
+<p>Mesmo sem base científica, as ideias do racismo e do eurocentrismo atravessaram o tempo. Elas aparecem hoje em situações como:</p>
+<div class="mapa">
+  <div class="t"><b>Racismo</b>Ofensas, discriminação no trabalho, na escola ou nos esportes por causa da cor da pele. No Brasil, o racismo é crime inafiançável e imprescritível pela Constituição de 1988.</div>
+  <div class="g"><b>Intolerância religiosa</b>Ataques a religiões de matriz africana e a outras crenças. Em 21 de janeiro, o Brasil lembra o Dia Nacional de Combate à Intolerância Religiosa.</div>
+  <div><b>Xenofobia</b>Rejeição ou violência contra imigrantes e refugiados por serem “de fora”.</div>
+  <div class="v"><b>Estereótipos</b>Imagens repetidas de “atraso” ou “selvageria” ligadas a povos africanos e indígenas, como você verá no capítulo 5.</div>
+</div>
+<p>Reconhecer de onde vêm essas ideias é um passo para combatê-las. A origem delas está em um período em que a dominação precisava de justificativas, e quem tinha o poder criou as teorias que mais lhe convinham.</p>
+
+<div class="goias-box"><span class="lab">Aqui, hoje</span>
+  <p>Em Goiás, como no resto do país, a convivência entre pessoas de origens diferentes é parte do dia a dia: há comunidades quilombolas, povos indígenas e descendentes de imigrantes e de migrantes de todo o Brasil. Respeitar essa diversidade significa recusar a ideia de que existem culturas “superiores” e “inferiores”. Procure, na sua escola ou no seu bairro, exemplos de como a diversidade aparece na música, na comida, nas festas e nos nomes de lugares.</p>
+</div>
+
+<div class="scroll"><table class="tb">
+  <thead><tr><th>Ideia</th><th>O que dizia</th><th>Por que é questionada</th></tr></thead>
+  <tbody>
+    <tr><td><b>Etnocentrismo</b></td><td>Minha cultura é a medida das outras</td><td>Cada cultura tem lógica e valor próprios</td></tr>
+    <tr><td><b>Darwinismo social</b></td><td>Raças “superiores” vencem e dominam as “inferiores”</td><td>Não existem raças biológicas; usou a biologia para justificar o poder</td></tr>
+    <tr><td><b>Missão civilizatória</b></td><td>A Europa tinha o dever de “civilizar” o mundo</td><td>Escondia interesses econômicos e destruía culturas e formas de organização</td></tr>
+    <tr><td><b>Racismo</b></td><td>Diferenças físicas determinam capacidade e moral</td><td>Transforma diferença em desigualdade e é crime no Brasil</td></tr>
+  </tbody></table></div>
+
+  </div>
+  <div class="ch-end"><span>Capítulo 2 de 5</span><span>Próximo: A partilha da África →</span></div>
+</section>
+
+<section class="chapter" id="cap3">
+  <header class="ch-head"><div class="ch-num">3</div><div>
+    <p class="eyebrow">1880–1914 · África</p><h2>A partilha da África</h2>
+    <p class="deck">Como um continente inteiro, com centenas de povos e reinos, foi dividido em mapas europeus — e como os africanos resistiram.</p></div></header>
+  <div class="body">
+    <div class="chips"><span class="chip">GO-EF08HI23-A</span><span class="chip">GO-EF08HI24-A</span><span class="chip">Matriz: disputa por territórios e ampliação dos domínios</span><span class="chip g">Conferência de Berlim · Congo · Resistência africana</span></div>
+<p class="lead">Até meados do século XIX, a presença europeia na África, com exceção do norte, restringia-se ao litoral. Os europeus fundavam feitorias para comerciar, inclusive com o tráfico de pessoas escravizadas. A partir de 1880, porém, eles já não queriam só comerciar: queriam conquistar as terras e submeter os povos. Em 1880, ocupavam cerca de 10% do continente. Em 1900, eram senhores de cerca de 90%.</p>
+
+<div class="perguntas-box"><span class="lab">Perguntas orientadoras</span>
+  <ul>
+    <li>Como era a África antes da partilha?</li>
+    <li>O que decidiram as potências na Conferência de Berlim?</li>
+    <li>O que os europeus tiraram da África e que efeitos isso teve sobre as comunidades locais?</li>
+    <li>De que formas os africanos resistiram?</li>
+  </ul>
+</div>
+
+<h3>Uma África de reinos e impérios</h3>
+<p>Os europeus diziam que a África era um continente “primitivo” e sem organização política. Os historiadores mostram o contrário. No século XVIII, por exemplo, havia reinos como Ashanti e Dagomba, na Costa do Ouro; Daomé e Iorubá, na costa do Benin; Kuba, Luba e Lunda, na bacia do Zaire; e Zulu, no sul. Neles havia governantes centralizados, governadores de províncias, ministros, noção de soberania, eleições, organização fiscal e diplomática. Ou seja, havia verdadeiras organizações políticas.</p>
+
+<h3>Como foi possível conquistar um continente</h3>
+<p>Os europeus avançaram com o apoio da ciência e da tecnologia: a <b>metralhadora</b> e outras armas de repetição deram vantagem militar, o <b>barco a vapor</b> permitiu entrar pelos rios e o <b>quinino</b>, remédio contra a malária, protegeu os soldados e exploradores de uma doença que antes dificultava a entrada no interior. Expedições “científicas” mapearam rios, minérios e povos, e depois de 1870 muitas passaram a ser financiadas por governos e empresas. Por meio de ataques e de pressão diplomática, as terras conquistadas eram transformadas em <b>colônias</b>, <b>protetorados</b>, <b>domínios</b> ou <b>áreas de influência</b>.</p>
+<div class="callout concept"><span class="lab">Conceito-chave</span><b>Protetorado:</b> país ou território que mantém governo próprio, mas é controlado por outro Estado na política externa e na segurança. Marrocos e Tunísia, por exemplo, foram protetorados franceses.</div>
+
+<h3>Quem ficou com o quê</h3>
+<div class="scroll"><table class="tb">
+  <thead><tr><th style="width:20%">Potência</th><th>Domínios e formas de ocupação</th></tr></thead>
+  <tbody>
+    <tr><td><b>França</b></td><td>Conquista da Argélia a partir de c. 1830; protetorados no Marrocos e na Tunísia; grande parte da África Ocidental e Equatorial; Madagascar, no oceano Índico.</td></tr>
+    <tr><td><b>Grã-Bretanha</b></td><td>Protetorado no Egito (década de 1880); Sudão, Uganda, África Oriental (atual Quênia) e Rodésia (atual Zimbábue); sul da África, com a União Sul-Africana.</td></tr>
+    <tr><td><b>Bélgica</b></td><td>Congo, transformado em propriedade particular do rei Leopoldo II, o chamado “Estado Livre do Congo”.</td></tr>
+    <tr><td><b>Alemanha</b></td><td>Entrou na corrida quando boa parte do continente já estava ocupada: África do Sudoeste Alemã e África Oriental Alemã.</td></tr>
+    <tr><td><b>Portugal e Espanha</b></td><td>Portugal manteve áreas conquistadas nos séculos XV e XVI: Guiné, Angola, Moçambique, São Tomé e Príncipe e Cabo Verde. A Espanha conservou parte do Marrocos.</td></tr>
+  </tbody></table></div>
+
+<h3>A Conferência de Berlim (1884-1885)</h3>
+<p>A corrida imperialista gerou tensões que ameaçavam a paz na Europa. Para evitar uma guerra, as potências europeias se reuniram em Berlim, na Alemanha, entre 1884 e 1885, para combinar regras e condições favoráveis à ocupação da África. Nenhum governante africano foi convidado. Foi combinado, entre outras coisas:</p>
+<div class="cards">
+  <div class="card"><span class="n">Regra 1</span><h6>Livre navegação</h6><p>Nas bacias dos rios Congo e Níger, duas importantes vias de penetração no continente.</p></div>
+  <div class="card"><span class="n">Regra 2</span><h6>Livre-comércio</h6><p>Na bacia do rio Congo.</p></div>
+  <div class="card"><span class="n">Regra 3</span><h6>Ocupação efetiva</h6><p>Uma nação só teria direito a um território se comunicasse a ocupação às demais e enviasse uma autoridade capaz de manter a ordem.</p></div>
+  <div class="card"><span class="n">Regra 4</span><h6>O Congo de Leopoldo II</h6><p>O Estado Livre do Congo foi reconhecido como propriedade particular do rei da Bélgica, servindo de área-tampão entre as outras potências.</p></div>
+</div>
+<figure class="doc"><blockquote>“Não há mais África africana.”</blockquote>
+  <figcaption><b>Jacques Le Goff</b>, historiador francês, sobre a divisão do continente entre os europeus. LE GOFF, Jacques. <em>Uma breve história da Europa</em>. Petrópolis: Vozes, 2008. p. 126. Citado em BOULOS JÚNIOR (2022).</figcaption></figure>
+<aside class="support"><header><i></i>Texto de apoio · Tratados sem entender o que assinavam</header>
+  <div class="in">
+    <p>De fuzil apontado ao peito, sobas africanos cediam o poder a comandantes de tropas europeias. Outros assinavam tratados de proteção, na ignorância de que transferiam aos estrangeiros a soberania sobre suas terras e suas gentes: julgavam estar arrendando ou cedendo para uso provisório um pedaço grande ou pequeno de solo […]. De vários dos grandes reis africanos as intenções europeias não passaram, porém, despercebidas.</p>
+  </div>
+  <div class="src"><b>Fonte:</b> SILVA, Alberto da Costa e. O Brasil, a África e o Atlântico no século XIX. <em>Estudos Avançados</em>, São Paulo, v. 8, n. 21, p. 21-42, 1994. p. 35.</div>
+</aside>
+
+<h3>O que se tirava da África</h3>
+<p>As potências buscavam matérias-primas e riquezas. A borracha e o marfim vinham do Congo; algodão, café e açúcar, das colônias portuguesas; o óleo de palma, da África Ocidental francesa; o ouro e os diamantes, do sul do continente. O ferro, o cobre, o estanho e outros minérios também eram muito procurados para a indústria e para as ferrovias. A descoberta de diamantes (1867) e de ouro (1887) na região sul levou a conflitos entre ingleses e bôeres, e a Inglaterra venceu a guerra que se estendeu de 1899 a 1902, formando a União Sul-Africana.</p>
+
+<div class="callout warn"><span class="lab">O caso do Congo</span>
+  <p>Em 1884, usando a força e a diplomacia, o rei Leopoldo II da Bélgica transformou o Congo em propriedade particular. O território, dezenas de vezes maior que a Bélgica, era riquíssimo em borracha e marfim. Os administradores recebiam prêmios por conseguir o máximo de produtos. Mulheres, crianças e idosos eram mantidos como reféns, enquanto os homens iam à floresta coletar borracha. Quem não entregava a quantia exigida podia ser morto ou ter mãos e pés decepados. Em 1903, o missionário batista A. E. Scrivener denunciou os horrores que presenciara. Sob pressão da opinião pública internacional, Leopoldo II perdeu o direito sobre o Congo, que passou à administração do governo belga. A dominação do Congo envolveu a morte de cerca de 10 milhões de africanos.</p></div>
+
+<h3>Os impactos sobre as comunidades locais</h3>
+<p>A dominação mudou profundamente a vida africana. Em muitas regiões, a agricultura de subsistência, com rodízio de terras, deu lugar à <b>monocultura</b> de produtos de exportação em grandes propriedades, o que empobreceu solos e quebrou equilíbrios ecológicos. Os africanos foram obrigados a fornecer soldados para exércitos coloniais, trabalhadores forçados para plantações e minas e carregadores, além de pagar impostos muitas vezes abusivos. As autoridades coloniais também desorganizaram a vida política: depuseram chefes tradicionais ou os transformaram em colaboradores, como fizeram os britânicos em vários lugares. Na Argélia, os franceses tomaram terras dos nativos e os obrigaram a trabalhar nas culturas de exportação, e uma lei de 1908 chegou a pedir o fim da instrução primária dos “indígenas”.</p>
+
+<h3>A resistência africana</h3>
+<p>Os africanos reagiram à dominação de diversas formas, inclusive com revoltas. Os principais motivos foram a perda de soberania, a exploração econômica e a imposição de hábitos e modos de administração europeus.</p>
+<div class="two">
+  <div class="callout teal"><span class="lab">Ashanti · Costa do Ouro (atual Gana)</span><p>A Rebelião Ashanti durou dez anos (1890 a 1900). Teve como estopim a deposição de chefes tradicionais pelos britânicos e a exigência de que o governador se sentasse no Tamborete de Ouro, símbolo da alma ashanti. A rainha de Edweso, Nana Yaa Asantewaa, liderou a resistência. Foi presa e deportada para as ilhas Seychelles, onde morreu em 1921.</p></div>
+  <div class="callout concept"><span class="lab">Zulus · sul da África</span><p>Em janeiro de 1879, cerca de 25 mil zulus do rei Cetshwayo derrotaram em Isandhlwana tropas britânicas, apesar de terem armas inferiores. O exército zulu era disciplinado e venceu outros combates antes de cair em Ulundi, em julho do mesmo ano.</p></div>
+</div>
+<div class="two">
+  <div class="callout green"><span class="lab">Sudão</span><p>Sudaneses muçulmanos reagiram ao domínio inglês, travaram a chamada “guerra santa” e chegaram a retomar Cartum, antes de serem derrotados pela superioridade bélica britânica.</p></div>
+  <div class="callout warn"><span class="lab">Etiópia</span><p>A Etiópia derrotou a Itália na Batalha de Adwa, em 1896, e foi um dos poucos países africanos a manter a independência nesse período.</p></div>
+</div>
+<figure class="doc"><blockquote>“Se vocês, homens de Asante, não vão em frente, então nós vamos. […] Vamos lutar contra os homens brancos.”</blockquote>
+  <figcaption><b>Yaa Asantewaa</b>, rainha de Edweso, segundo a tradição ashanti. WABA, Pinado Abdu. Yaa Nana Asantewaa: a rainha guerreira da nação Ashanti do Gana. <em>DW</em>, 12 jan. 2018. Citado em BOULOS JÚNIOR (2022).</figcaption></figure>
+
+<div class="think"><small>Para pensar</small>Se os africanos já tinham reinos organizados, comércio e exércitos, por que os europeus insistiam em chamar a África de “atrasada”? A quem essa imagem beneficiava?</div>
+
+<ul class="tl">
+  <li><div class="y">c. 1830</div><div class="t"><b>Franceses na Argélia</b><span>Terras tomadas e cultivos voltados à exportação.</span></div></li>
+  <li><div class="y">1879</div><div class="t"><b>Isandhlwana</b><span>Vitória zulu sobre os britânicos.</span></div></li>
+  <li class="hl"><div class="y">1884–85</div><div class="t"><b>Conferência de Berlim</b><span>Regras da partilha, sem africanos.</span></div></li>
+  <li><div class="y">1890–1900</div><div class="t"><b>Rebelião Ashanti</b><span>Liderança de Yaa Asantewaa.</span></div></li>
+  <li><div class="y">1896</div><div class="t"><b>Batalha de Adwa</b><span>A Etiópia derrota a Itália.</span></div></li>
+  <li><div class="y">1899–1902</div><div class="t"><b>Guerra dos bôeres</b><span>Inglaterra domina o sul do continente.</span></div></li>
+  <li><div class="y">1903</div><div class="t"><b>Denúncia no Congo</b><span>Leopoldo II perde o Congo.</span></div></li>
+</ul>
+
+  </div>
+  <div class="ch-end"><span>Capítulo 3 de 5</span><span>Próximo: A partilha da Ásia e da Oceania →</span></div>
+</section>
+
+<section class="chapter" id="cap4">
+  <header class="ch-head"><div class="ch-num">4</div><div>
+    <p class="eyebrow">Séculos XVIII a XX · Ásia e Oceania</p><h2>A partilha da Ásia e da Oceania</h2>
+    <p class="deck">Do ópio na China aos tecidos da Índia: como o mesmo capitalismo industrial que partilhou a África alcançou o outro lado do mundo, e como os povos reagiram.</p></div></header>
+  <div class="body">
+    <div class="chips"><span class="chip">GO-EF08HI23-A</span><span class="chip">GO-EF08HI24-A</span><span class="chip">Matriz: disputa por territórios na África e na Ásia</span><span class="chip g">Índia · China · Oceania · Resistências</span></div>
+<p class="lead">A Ásia também foi alvo do imperialismo. Ali, as potências encontraram grandes impérios e reinos, mercados enormes e produtos muito valorizados na Europa, como seda, chá, porcelana e algodão. A Grã-Bretanha foi a que mais lucrou com a expansão colonial e formou o maior império do período: no auge, dominava cerca de um quinto da superfície do planeta e cerca de 23% da população mundial. Mas não estava sozinha: França, Holanda, Portugal, Rússia, Alemanha, Estados Unidos e Japão também disputaram territórios na Ásia e na Oceania.</p>
+
+<div class="perguntas-box"><span class="lab">Perguntas orientadoras</span>
+  <ul>
+    <li>Como os britânicos conquistaram a Índia e o que isso fez com a economia indiana?</li>
+    <li>Por que a China foi forçada a abrir seus portos?</li>
+    <li>Que formas de resistência surgiram?</li>
+  </ul>
+</div>
+
+<h3>Britânicos na Índia</h3>
+<p>Os britânicos aportaram na Índia no século XVII, por meio da Companhia das Índias Orientais, e foram desalojando comerciantes de outros países europeus. Compravam tecidos finos, como a musselina, e os revendiam na Europa com grande lucro. A Índia não era um país unificado: era dividida em vários reinos e principados, com hindus e muçulmanos em maioria. Os ingleses aproveitaram essas divisões, fazendo guerras e alianças com governantes locais, e aos poucos se impuseram, a partir de 1757.</p>
+<p>Depois, mudaram a economia. Aumentaram os impostos sobre os tecidos indianos e passaram a vender tecidos ingleses aos indianos. A maioria das tecelagens indianas faliu, e a Índia, antes grande exportadora de tecidos, passou a comprá-los da Inglaterra e a produzir algodão para as fábricas inglesas. A Índia tornou-se, no século XIX, a “joia mais preciosa da Coroa britânica”.</p>
+
+<h4>A Revolta dos Sipaios (1857)</h4>
+<p>Os abusos, o empobrecimento e as crises de fome causavam enorme insatisfação. Na segunda metade do século XIX, a Índia sofreu seis grandes crises de fome, que mataram cerca de 15 milhões de pessoas. Em 1857, soldados indianos a serviço dos britânicos, os <b>sipaios</b>, se rebelaram. Eles formavam a maior parte das forças militares britânicas na Índia: de 280 mil homens, só 46 mil eram britânicos. O estopim foi a recusa em usar cartuchos de armas que, para carregar, precisavam ser rasgados com a boca e continham gordura de vaca ou de porco, o que ofendia hindus, para quem a vaca é sagrada, e muçulmanos, que consideram o porco impuro.</p>
+<p>A revolta foi esmagada com metralhadoras e canhões, com massacres que deixaram milhares de mortos. Depois disso, a Companhia das Índias Orientais foi extinta, e a Inglaterra assumiu o governo direto, com um vice-rei. Mais tarde, a rainha Vitória foi proclamada imperatriz da Índia. Para evitar novas revoltas, os britânicos diminuíram o número de sipaios e apoiaram militar e financeiramente líderes locais, que em troca deviam fidelidade à Inglaterra. Essa tática de dominar por meio das elites locais foi usada em outras colônias.</p>
+
+<h3>O Sudeste Asiático</h3>
+<p>Depois de conquistar a Índia, a Inglaterra anexou a Birmânia (1886) e a Malásia, tentando limitar a influência francesa na região. A França ocupou a Indochina, formada pelos atuais Vietnã, Laos e Camboja, e instaurou o regime de <b>protetorado</b>. A Holanda dominava a Indonésia, e Portugal manteve áreas como Goa, na Índia, e Macau, na China.</p>
+
+<h3>A China e as Guerras do Ópio</h3>
+<p>Por séculos, a China foi quase autossuficiente e pouco interessada em produtos europeus, enquanto os europeus queriam sua seda, seu chá e sua porcelana. O comércio era favorável aos chineses. Por volta de 1820, a situação se inverteu: os britânicos passaram a vender na China o <b>ópio</b>, droga que causa forte dependência, produzida nas plantações da Índia. Em troca do ópio, os ingleses obtinham o chá chinês, que revendiam na Europa. Esse comércio entre Inglaterra, Índia e China era uma espécie de comércio triangular.</p>
+<div class="mapa">
+  <div><b>Índia → China</b>Os ingleses levavam ópio indiano.</div>
+  <div class="g"><b>China → Inglaterra</b>Chá, seda e porcelana.</div>
+  <div class="t"><b>Inglaterra → Índia</b>Tecidos industrializados.</div>
+</div>
+<p>O ópio arruinava a saúde de milhões de chineses e a economia. O governo chinês proibiu a importação em 1800 e, em 1839, confiscou e lançou ao mar quase 1.400 toneladas de ópio de navios ingleses no porto de Cantão. A resposta britânica foi a guerra: na <b>Primeira Guerra do Ópio</b> (1839-1842), a rainha Vitória mandou bombardear cidades chinesas, alegando prejuízos à propriedade privada. A China foi derrotada e assinou o <b>Tratado de Nanquim</b> (1842), pelo qual cedeu Hong Kong à Inglaterra e abriu portos ao comércio europeu e norte-americano. Poucos anos depois, uma segunda guerra, vencida pelos europeus, resultou no Tratado de Pequim (1860), que abriu ainda mais o mercado chinês e passou aos ocidentais o controle de setores importantes da economia. Estados Unidos, França, Rússia, Japão e Alemanha obtiveram vantagens semelhantes. Assim, à força, os portos da China foram abertos às potências.</p>
+
+<h4>A Guerra dos Boxers (1899-1901)</h4>
+<p>A entrada de estrangeiros mudou o país. Em 1898, o imperador tentou a Reforma dos Cem Dias, mas os conservadores a barraram. Uma sociedade secreta, os Punhos da Justiça, que os ocidentais chamavam de <i>boxers</i>, atacou estrangeiros e missionários. Em resposta, uma coalizão de forças europeias, estadunidenses e japonesas invadiu a China. A derrota foi catastrófica e a China foi forçada a manter sua economia e seu território abertos aos estrangeiros por muito tempo. Uma caricatura francesa de 1898 mostra os países europeus disputando a China como se ela fosse uma torta, com o imperador chinês desesperado ao fundo.</p>
+
+<h3>Estados Unidos, Japão e a Oceania</h3>
+<p>O imperialismo não foi só europeu. O <b>Japão</b>, depois de modernizar sua economia e seu exército, passou a atuar como potência e anexou territórios na Ásia. Os <b>Estados Unidos</b> também conquistaram territórios na Ásia e na Oceania ao final do século XIX, como as Filipinas, Guam e o Havaí. Na <b>Oceania</b>, os britânicos dominaram a Austrália e a Nova Zelândia, e muitas ilhas do Pacífico foram repartidas entre Grã-Bretanha, França, Alemanha, Estados Unidos e outras potências. Povos originários, como os aborígenes australianos e os maori, perderam terras e sofreram violência.</p>
+
+<div class="callout concept"><span class="lab">Dominar sem governar tudo</span>
+  <p>Nem sempre o imperialismo foi conquista direta. Muitas vezes as potências preferiram o <b>domínio indireto</b>, mantendo chefes locais no poder como colaboradores, ou impondo tratados comerciais e <b>áreas de influência</b>, como na China. Em todos os casos, o objetivo era controlar mercados, matérias-primas e mão de obra.</p></div>
+
+<h3>Resistências na Ásia</h3>
+<div class="two">
+  <div class="callout teal"><span class="lab">Sipaios e Boxers</span><p>Revoltas armadas, como a dos sipaios (1857) e a dos boxers (1899-1901), foram esmagadas pela superioridade militar das potências, mas mostraram que não houve aceitação passiva do domínio.</p></div>
+  <div class="callout green"><span class="lab">Resistência pacífica: Gandhi</span><p>Mohandas Gandhi (1869-1948) organizou a <i>Satyagraha</i>, filosofia de não cooperação e não violência. Em 1930, liderou a Marcha do Sal, uma caminhada de cerca de 387 km até o litoral para protestar contra a lei britânica que obrigava os indianos a comprar sal inglês. A Índia só se tornaria independente em 1947.</p></div>
+</div>
+<div class="think"><small>Para pensar</small>A Índia produzia tecidos finos e exportava para o mundo. Depois da dominação britânica, passou a comprar tecidos ingleses. O que isso mostra sobre a relação entre imperialismo e economia?</div>
+
+<div class="goias-box"><span class="lab">Para ligar passado e presente</span>
+  <p>Hong Kong ficou sob domínio britânico de 1842 a 1997, ano em que voltou à China. O Brasil, por sua vez, não foi partilhado, mas fazia parte da rede de comércio e de empréstimos controlada pelas potências industriais, em especial pela Grã-Bretanha, que vendia manufaturados e financiava ferrovias e portos. Perceber essas ligações ajuda a ver que a história do imperialismo não aconteceu só “lá longe”.</p>
+</div>
+
+<ul class="tl">
+  <li><div class="y">1757</div><div class="t"><b>Início do domínio britânico na Índia</b><span>Por meio da Companhia das Índias Orientais.</span></div></li>
+  <li class="hl"><div class="y">1839–42</div><div class="t"><b>Primeira Guerra do Ópio</b><span>Tratado de Nanquim: Hong Kong e portos abertos.</span></div></li>
+  <li class="hl"><div class="y">1857</div><div class="t"><b>Revolta dos Sipaios</b><span>Fim da Companhia; governo direto britânico.</span></div></li>
+  <li><div class="y">1860</div><div class="t"><b>Tratado de Pequim</b><span>Mais vantagens às potências na China.</span></div></li>
+  <li><div class="y">1886</div><div class="t"><b>Birmânia anexada</b><span>Britânicos na Malásia, franceses na Indochina.</span></div></li>
+  <li><div class="y">1899–1901</div><div class="t"><b>Guerra dos Boxers</b><span>Coalizão estrangeira invade a China.</span></div></li>
+  <li><div class="y">1930</div><div class="t"><b>Marcha do Sal</b><span>Gandhi e a resistência não violenta.</span></div></li>
+</ul>
+
+  </div>
+  <div class="ch-end"><span>Capítulo 4 de 5</span><span>Próximo: Eurocentrismo, estereótipos e saberes →</span></div>
+</section>
+
+<section class="chapter" id="cap5">
+  <header class="ch-head"><div class="ch-num">5</div><div>
+    <p class="eyebrow">Ontem e hoje · Povos africanos e indígenas</p><h2>Eurocentrismo, estereótipos e saberes</h2>
+    <p class="deck">Como a Europa se colocou no centro da história, que imagens falsas criou sobre africanos e indígenas e que conhecimentos ela deixou de ver.</p></div></header>
+  <div class="body">
+    <div class="chips"><span class="chip">GO-EF08HI27-B</span><span class="chip">Matriz: eurocentrismo, estereótipos e respeito aos saberes</span><span class="chip g">Eurocentrismo · Estereótipos · Saberes africanos e indígenas</span></div>
+<p class="lead">As potências não dominaram apenas territórios: dominaram também a forma de contar a história. Durante a era do imperialismo, a Europa produziu livros, mapas, imagens e exposições que a mostravam como modelo de civilização e retratavam africanos, asiáticos e indígenas como atrasados ou perigosos. Essas imagens se espalharam, viraram senso comum e ainda influenciam o modo como muita gente enxerga esses povos. Neste capítulo você vai aprender a identificar esse olhar e a conhecer o que ele escondeu: os saberes, as tradições e as ciências de diferentes culturas.</p>
+
+<div class="perguntas-box"><span class="lab">Perguntas orientadoras</span>
+  <ul>
+    <li>Como o eurocentrismo ajudou a criar estereótipos sobre africanos e indígenas?</li>
+    <li>Que marcas disso aparecem hoje na linguagem, nas imagens e nas atitudes?</li>
+    <li>Que conhecimentos africanos e indígenas merecem ser reconhecidos e respeitados?</li>
+  </ul>
+</div>
+
+<h3>Como nasceu o estereótipo</h3>
+<p>No século XIX, o que os europeus sabiam da África, da Ásia ou das Américas vinha, em boa parte, de relatos de exploradores, missionários e administradores coloniais, de gravuras em jornais e de teorias racistas que apresentavam a Europa como o ápice da evolução. Os jornais celebravam a “coragem” dos exploradores brancos, mas não diziam que muitas das rotas que eles percorriam eram usadas havia séculos por povos africanos e comerciantes árabes. Charges e desenhos mostravam a África “antes da civilização”, como um lugar de selvageria, e “depois da ocupação”, como um lugar de ordem, de roupas europeias e disciplina. Em exposições universais, pessoas africanas e asiáticas chegaram a ser exibidas como atrações, o que reforçava a ideia de que eram “diferentes” e “inferiores”.</p>
+<div class="callout concept"><span class="lab">Conceito-chave</span><b>Estereótipo:</b> imagem pronta e simplificada sobre um grupo, repetida como se valesse para todos os seus membros. Quando vem de uma relação de poder, como a colonial, o estereótipo vira instrumento de dominação, porque faz parecer “natural” que um povo mande e o outro obedeça.</div>
+
+<h3>Palavras e mapas que carregam um ponto de vista</h3>
+<p>O olhar eurocêntrico está também na linguagem e nos mapas. Veja alguns exemplos:</p>
+<div class="scroll"><table class="tb">
+  <thead><tr><th>Expressão ou imagem</th><th>O que revela</th></tr></thead>
+  <tbody>
+    <tr><td>“Descobrimento” da América ou do Brasil</td><td>Dá a entender que o continente só passou a existir quando os europeus chegaram, apagando milhões de pessoas que já viviam aqui.</td></tr>
+    <tr><td>“Pré-colombiano”</td><td>Usa a chegada de Colombo como marco, como se a história anterior fosse só uma antessala.</td></tr>
+    <tr><td>“Tribo”, “dialeto”, “selvagem”</td><td>Termos usados quase só para africanos e indígenas, que sugerem atraso, quando se trata de povos, nações e línguas completas.</td></tr>
+    <tr><td>“Oriente” e “Ocidente”</td><td>Dependem do ponto de vista de quem está na Europa, tomada como centro.</td></tr>
+    <tr><td>Mapa-múndi da projeção de Mercator</td><td>Aumenta as áreas mais distantes do Equador. A África, que é cerca de 14 vezes maior que a Groenlândia, aparece com tamanho parecido, o que reduz visualmente o continente.</td></tr>
+  </tbody></table></div>
+
+<h3>Saberes africanos que a Europa não quis ver</h3>
+<p>Ao repetir que a África não tinha história, a Europa deixou de reconhecer sociedades com conhecimento próprio, ciência e arte:</p>
+<div class="cards">
+  <div class="card"><span class="n">Mali e Tombuctu</span><h6>Cidades de estudo</h6><p>Entre os séculos XIV e XVI, Tombuctu, na África Ocidental, foi centro de comércio e de saber, com bibliotecas e uma universidade, a de Sankoré. Milhares de manuscritos de astronomia, medicina, direito e literatura foram preservados.</p></div>
+  <div class="card"><span class="n">Metalurgia</span><h6>Ferro e bronze</h6><p>Povos africanos dominavam a produção de ferro havia séculos. O reino do Benin ficou famoso por esculturas em bronze e latão. Em 1897, uma expedição militar britânica saqueou o palácio de Benin e levou milhares de peças para museus da Europa, entre elas os chamados “Bronzes do Benin”.</p></div>
+  <div class="card"><span class="n">Arquitetura e organização</span><h6>Grande Zimbábue e reinos</h6><p>Entre os séculos XI e XV, o Grande Zimbábue construiu enormes muros de pedra. Reinos como Ashanti, Daomé e Kuba tinham administração, justiça e diplomacia próprias.</p></div>
+  <div class="card"><span class="n">Memória e tradição oral</span><h6>Os griôs</h6><p>Em várias sociedades africanas, narradores e músicos guardam e transmitem a história, as genealogias e os valores da comunidade pela palavra falada.</p></div>
+</div>
+
+<h3>Saberes indígenas que o discurso civilizatório silenciou</h3>
+<p>Os povos indígenas das Américas também produziram conhecimento. Domesticaram plantas que hoje alimentam o mundo, como milho, mandioca, batata, tomate, amendoim e cacau. Desenvolveram observações astronômicas e calendários, como os maias, sistemas de registro e de administração, como os quipus dos incas, e técnicas de manejo da floresta e de enriquecimento do solo, como a “terra preta de índio”, na Amazônia. Conhecem plantas medicinais, tecnologias de pesca e de construção e têm formas próprias de cuidar da terra e dos rios.</p>
+<p>No Brasil, são faladas mais de 270 línguas indígenas. Nomes de rios, cidades e estados vêm delas, como Araguaia, Tocantins e Paranaíba. O próprio nome <b>Goiás</b> vem dos Guaiás, povo indígena que habitava a região. Mesmo assim, quando se pensa em “índio”, muita gente ainda imagina uma figura do passado, nua e na floresta, como se quem usa roupas, celular ou mora na cidade deixasse de ser indígena.</p>
+
+<div class="two">
+  <div class="callout warn"><span class="lab">Estereótipos sobre a África</span><p>Muitas vezes a África aparece em filmes e noticiários só ligada à fome, à guerra ou à pobreza, como se fosse um país único. É um continente com 54 países, milhares de línguas e enorme variedade de paisagens, cidades, culturas e histórias.</p></div>
+  <div class="callout warn"><span class="lab">Estereótipos sobre os indígenas</span><p>Imagens do “índio” como preguiçoso, ingênuo ou preso ao passado ignoram que são centenas de povos distintos, com línguas e modos de vida próprios, que continuam vivos e se transformam como qualquer sociedade.</p></div>
+</div>
+
+<h3>As marcas que ficaram</h3>
+<p>Ideias do século XIX sobre superioridade e inferioridade sobreviveram de formas variadas: na tendência a ver a história como se tudo importante tivesse começado na Europa; nos livros e filmes que mostram africanos e indígenas só como vítimas ou como “exóticos”; no racismo cotidiano; na intolerância contra religiões de origem africana; na dificuldade de reconhecer conhecimentos tradicionais como ciência. Uma das respostas a isso, no Brasil, foram as leis que tornaram obrigatório o estudo da história e da cultura afro-brasileira e africana (Lei 10.639, de 2003) e da história e da cultura indígena (Lei 11.645, de 2008) nas escolas.</p>
+
+<div class="goias-box"><span class="lab">Recorte regional · Goiás</span>
+  <h4>Os Kalunga</h4>
+  <p>No nordeste de Goiás, nos municípios de Cavalcante, Monte Alegre e Teresina de Goiás, vivem os Kalunga, comunidade quilombola formada por descendentes de pessoas africanas escravizadas que resistiram e criaram sua própria vida. Seu território, o Sítio Histórico e Patrimônio Cultural Kalunga, é considerado o maior território quilombola do país. Os Kalunga preservam saberes sobre agricultura, plantas medicinais, festas e tradições passadas de geração em geração.</p>
+  <h4>Os Karajá e as bonecas ritxòkò</h4>
+  <p>O povo Karajá, que vive às margens do rio Araguaia (inclusive em Aruanã, em Goiás), modela em cerâmica as bonecas <i>ritxòkò</i>, que representam o cotidiano e a visão de mundo do povo. A arte foi reconhecida pelo IPHAN como patrimônio cultural imaterial do Brasil. É um exemplo de como um saber indígena pode ser, ao mesmo tempo, arte, história e identidade.</p>
+</div>
+
+<h3>Como ler uma fonte com olhar crítico</h3>
+<p>Ao encontrar uma imagem, um texto ou um mapa sobre outro povo, vale se perguntar:</p>
+<ol>
+  <li><b>Quem produziu</b> esse material e de que lugar ele falava?</li>
+  <li><b>Quem aparece falando</b> e quem só é descrito pelos outros?</li>
+  <li><b>Que palavras ou imagens</b> sugerem que um povo é “atrasado”, “exótico” ou “perigoso”?</li>
+  <li><b>Que saberes, vozes ou pontos de vista</b> ficaram de fora?</li>
+</ol>
+
+<div class="think"><small>Para pensar</small>Respeitar saberes e tradições não é concordar com tudo, e sim reconhecer que cada cultura construiu conhecimentos para resolver problemas da própria realidade. O que podemos aprender com isso?</div>
+
+  </div>
+  <div class="ch-end"><span>Capítulo 5 de 5</span><span>Próximo: Síntese →</span></div>
+</section>
+
+<section class="chapter" id="sintese">
+  <header class="ch-head"><div class="ch-num">S</div><div>
+    <p class="eyebrow">Para fechar</p><h2>Síntese: o mundo partilhado</h2>
+    <p class="deck">As três perguntas do bimestre lado a lado.</p></div></header>
+  <div class="body">
+    <p class="lead">O imperialismo reuniu economia, política e ideias. A economia explica por que as potências quiseram dominar: capital acumulado, indústrias famintas por matérias-primas e mercados para vender. A política mostra como fizeram: conquista, tratados, guerras e conferências. As ideias revelam como justificaram: racismo, darwinismo social e “missão civilizatória”. E a resistência dos povos dominados lembra que a história não foi um processo de mão única.</p>
+    <div class="scroll"><table class="tb">
+      <thead><tr><th>Habilidade essencial</th><th>Ideia central</th><th>Exemplos</th></tr></thead>
+      <tbody>
+        <tr><td><b>Conexão entre imperialismo, neocolonialismo e capitalismo industrial</b><br><small>GO-EF08HI24-A</small></td><td>A Segunda Revolução Industrial, a concentração de capitais e a crise de 1873 levaram as potências a buscar matérias-primas, mercados e áreas de investimento em outros continentes.</td><td>Borracha e marfim no Congo; ouro e diamantes na África do Sul; algodão e chá na Índia e na China; Guerras do Ópio.</td></tr>
+        <tr><td><b>Disputa por territórios e justificativas ideológicas</b><br><small>GO-EF08HI23-A</small></td><td>A dominação foi justificada pelo etnocentrismo, pelo darwinismo social, pelo racismo e pela “missão civilizatória”. Ideias que hoje a ciência rejeita, mas que deixaram marcas de intolerância.</td><td>Discurso de Jules Ferry; Conferência de Berlim; “fardo do homem branco”.</td></tr>
+        <tr><td><b>Eurocentrismo, estereótipos e respeito aos saberes</b><br><small>GO-EF08HI27-B</small></td><td>O olhar eurocêntrico criou estereótipos sobre africanos e indígenas e silenciou seus conhecimentos. Reconhecer e respeitar esses saberes é um modo de combater o preconceito.</td><td>Tombuctu e Benin; saberes indígenas; Kalunga e Karajá em Goiás; leis 10.639/2003 e 11.645/2008.</td></tr>
+      </tbody></table></div>
+
+    <h3>Resistir: o outro lado da história</h3>
+    <div class="cards">
+      <div class="card"><span class="n">África</span><h6>Ashanti, zulus, sudaneses, etíopes</h6><p>Resistência armada e organização política contra a perda da soberania, a exploração e a imposição de costumes.</p></div>
+      <div class="card"><span class="n">Índia</span><h6>Sipaios e Gandhi</h6><p>Da revolta de 1857 à resistência não violenta da <i>Satyagraha</i>.</p></div>
+      <div class="card"><span class="n">China</span><h6>Boxers</h6><p>Reação ao avanço estrangeiro, derrotada pela intervenção de uma coalizão de potências.</p></div>
+      <div class="card"><span class="n">Hoje</span><h6>Quilombolas e povos indígenas</h6><p>Luta pelo território, pela memória e pelo reconhecimento dos saberes.</p></div>
+    </div>
+
+    <div class="think"><small>Para pensar</small>No século XIX, as potências diziam estar levando “civilização”. Hoje, quando alguém afirma que sua cultura é superior à de outro povo, que argumentos você pode usar para mostrar que essa ideia não se sustenta?</div>
+  </div>
+</section>
+
+<section class="chapter" id="glossario">
+  <header class="ch-head"><div class="ch-num">A</div><div><p class="eyebrow">Para consultar</p><h2>Glossário</h2><p class="deck">Os conceitos centrais do bimestre em linguagem direta.</p></div></header>
+  <div class="body"><dl class="gl">
+    <dt>Área de influência</dt><dd>Região que não é colônia formal, mas na qual uma potência controla a economia e a política.</dd>
+    <dt>Capitalismo financeiro</dt><dd>Fase do capitalismo em que bancos e grandes empresas se aproximam e financiam a expansão da indústria e das conquistas.</dd>
+    <dt>Cartel</dt><dd>Acordo entre empresas independentes para combinar preços e dividir mercados.</dd>
+    <dt>Colônia</dt><dd>Território governado diretamente por outro país, a metrópole.</dd>
+    <dt>Conferência de Berlim</dt><dd>Reunião das potências europeias, em 1884-1885, que definiu regras para a ocupação da África, sem a participação de africanos.</dd>
+    <dt>Darwinismo social</dt><dd>Teoria do século XIX que aplicou ideias da evolução biológica às sociedades, para dizer que existiam raças “superiores” e “inferiores”. É racista e não tem base científica.</dd>
+    <dt>Domínio indireto</dt><dd>Forma de controle em que a potência mantém chefes locais no poder, como colaboradores.</dd>
+    <dt>Estereótipo</dt><dd>Imagem simplificada e preconceituosa sobre um grupo, repetida como se valesse para todos.</dd>
+    <dt>Etnocentrismo</dt><dd>Atitude de julgar outras culturas pelos padrões da própria, considerando-a superior.</dd>
+    <dt>Eurocentrismo</dt><dd>Etnocentrismo que coloca a Europa como centro e modelo da história e do progresso.</dd>
+    <dt>Griô</dt><dd>Em várias sociedades da África Ocidental, narrador, músico e guardião da memória e da história de um povo.</dd>
+    <dt>Guerras do Ópio</dt><dd>Conflitos entre a China e potências europeias, a partir de 1839, que forçaram a abertura dos portos chineses e a cessão de Hong Kong à Inglaterra.</dd>
+    <dt>Holding</dt><dd>Empresa que controla várias outras por meio de suas ações.</dd>
+    <dt>Imperialismo</dt><dd>Política de expansão de um Estado sobre outros povos e territórios para obter mercados, matérias-primas e poder. Na história, indica sobretudo o período de 1870 a 1914.</dd>
+    <dt>Intolerância religiosa</dt><dd>Desrespeito, discriminação ou ataque a crenças e práticas religiosas de outras pessoas.</dd>
+    <dt>Missão civilizatória</dt><dd>Justificativa usada por potências para dizer que tinham o dever de “civilizar” outros povos, impondo seus valores e sua organização.</dd>
+    <dt>Monocultura</dt><dd>Cultivo de um único produto em grandes áreas, em geral para exportação.</dd>
+    <dt>Neocolonialismo</dt><dd>“Novo colonialismo” do século XIX, ligado ao capitalismo industrial, que diferiu da colonização mercantilista dos séculos XVI a XVIII.</dd>
+    <dt>Protecionismo</dt><dd>Política que protege a indústria nacional com impostos sobre produtos estrangeiros.</dd>
+    <dt>Protetorado</dt><dd>Território com governo próprio, mas controlado por outro Estado na política externa e na segurança.</dd>
+    <dt>Quilombola</dt><dd>Pessoa de comunidade formada por descendentes de africanos escravizados que resistiram e construíram modos de vida próprios, como os Kalunga, em Goiás.</dd>
+    <dt>Racialismo</dt><dd>Conjunto de doutrinas do século XIX sobre as supostas “raças humanas” e sua hierarquia.</dd>
+    <dt>Racismo</dt><dd>Prática de discriminar pessoas com base na ideia de raça, transformando diferença em desigualdade. É crime no Brasil.</dd>
+    <dt>Saberes tradicionais</dt><dd>Conhecimentos construídos e transmitidos por gerações em comunidades, como os de agricultura, medicina e arte de povos africanos e indígenas.</dd>
+    <dt>Satyagraha</dt><dd>Filosofia de não cooperação e resistência não violenta, criada por Gandhi.</dd>
+    <dt>Segunda Revolução Industrial</dt><dd>Fase da industrialização, a partir de meados do século XIX, marcada pelo aço, pela eletricidade, pelo petróleo e pela produção em massa.</dd>
+    <dt>Sipaios</dt><dd>Soldados indianos treinados pelos britânicos, que se rebelaram em 1857.</dd>
+    <dt>Truste</dt><dd>Fusão de empresas do mesmo ramo para dominar o mercado.</dd>
+    <dt>Xenofobia</dt><dd>Aversão, rejeição ou violência contra pessoas estrangeiras.</dd>
+  </dl></div>
+</section>
+
+<section class="chapter" id="fontes">
+  <header class="ch-head"><div class="ch-num">§</div><div><p class="eyebrow">Referências</p><h2>Bibliografia e fontes</h2><p class="deck">De onde vêm os textos de apoio, as citações e os dados deste livro.</p></div></header>
+  <div class="body">
+    <h4>Livros didáticos de base</h4>
+    <ol class="refs">
+      <li>BOULOS JÚNIOR, Alfredo. <em>História: Sociedade &amp; Cidadania, 8º ano</em>. 1. ed. São Paulo: FTD, 2022. (Capítulo 13: Industrialização, imperialismo e resistência.)</li>
+      <li>VAINFAS, Ronaldo; FERREIRA, Jorge; FARIA, Sheila de Castro; CALAINHO, Daniela Buono. <em>História.doc: 8º ano</em>. 2. ed. São Paulo: Saraiva, 2018. (Capítulo 13: A partilha do mundo entre as nações industrializadas.)</li>
+      <li>EDITORA MODERNA (org.). <em>Araribá Conecta: História, 8º ano</em>. 1. ed. São Paulo: Moderna, 2022.</li>
+      <li>EDITORA MODERNA (org.). <em>Araribá Mais: História, 8º ano</em>. São Paulo: Moderna, 2018.</li>
+    </ol>
+    <h4>Obras e fontes citadas nos textos</h4>
+    <ol class="refs" start="5">
+      <li>HOBSBAWM, Eric John. <em>Da Revolução Industrial inglesa ao imperialismo</em>. Rio de Janeiro: Forense Universitária, 2000. p. 101-102.</li>
+      <li>MESGRAVIS, Laima. <em>A colonização da África e da Ásia</em>. São Paulo: Atual, 1994. (História geral em documentos).</li>
+      <li>LE GOFF, Jacques. <em>Uma breve história da Europa</em>. Petrópolis: Vozes, 2008. p. 126.</li>
+      <li>SILVA, Alberto da Costa e. O Brasil, a África e o Atlântico no século XIX. <em>Estudos Avançados</em>, São Paulo, v. 8, n. 21, p. 21-42, 1994.</li>
+      <li>HERNANDES, Leila Leite. <em>A África na sala de aula: visita à história contemporânea</em>. São Paulo: Selo Negro, 2005. p. 114-115.</li>
+      <li>WABA, Pinado Abdu. Yaa Nana Asantewaa: a rainha guerreira da nação Ashanti do Gana. <em>DW</em>, 12 jan. 2018.</li>
+      <li>TODOROV, Tzvetan. <em>Nós e os outros: a reflexão francesa sobre a diversidade humana</em>. Rio de Janeiro: Jorge Zahar, 1993. v. 1.</li>
+      <li>CAMPOS, Rodrigo Duque Estrada; GONÇALVES, Camila Helena Pereira; RIEGER, Fernando Camara. Poder e identidade na África: o imperialismo e suas consequências para o continente. <em>Revista Perspectiva</em>, Florianópolis, v. 4, p. 143-162, 2011.</li>
+      <li>CANÊDO, Letícia Bicalho. <em>A descolonização da Ásia e da África</em>. São Paulo: Atual; Campinas: Unicamp, 1985. (Discutindo a História).</li>
+      <li>DUARTE, Danilo Freire. Uma breve história do ópio e dos opioides. <em>Revista Brasileira de Anestesiologia</em>, Campinas, v. 55, n. 1, p. 135-146, 2005.</li>
+    </ol>
+    <h4>Legislação</h4>
+    <ol class="refs" start="15">
+      <li>BRASIL. Constituição da República Federativa do Brasil de 1988, art. 5º, inciso XLII (crime de racismo).</li>
+      <li>BRASIL. Lei nº 10.639, de 9 de janeiro de 2003 (ensino de história e cultura afro-brasileira e africana).</li>
+      <li>BRASIL. Lei nº 11.645, de 10 de março de 2008 (ensino de história e cultura indígena).</li>
+    </ol>
+    <h4>Matriz curricular</h4>
+    <ol class="refs" start="18">
+      <li>GOIÁS. Secretaria de Estado da Educação. <em>Documento Curricular para Goiás (DC-GO) Ampliado</em> e <em>Matriz de Habilidades Essenciais</em>: História, 8º ano, 4º bimestre.</li>
+      <li>BRASIL. Ministério da Educação. <em>Base Nacional Comum Curricular</em>. Brasília, 2018.</li>
+    </ol>
+  </div>
+</section>
+<div class="colophon">HISTÓRIA · 8º ANO · 4º BIMESTRE · O MUNDO PARTILHADO · CERO · 2026<br>Colégio Estadual Rodolfo de Oliveira · CERO · 2026</div>
+
+</main>
+<script>
+(function(){
+  var bar=document.getElementById('progress');
+  function onScroll(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);bar.style.width=(p*100)+'%'}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var UNITS=[['Capítulos','u0',['cap1','cap2','cap3','cap4','cap5']]];
+  var CONSULT=['sintese','glossario','fontes'];
+  function sec(id){return document.getElementById(id)}
+  var tab=document.createElement('button');tab.className='toc-tab';tab.setAttribute('aria-label','Abrir sumário');tab.setAttribute('aria-expanded','false');tab.innerHTML='<b>☰</b> Sumário';
+  var ov=document.createElement('div');ov.className='toc-ov';
+  var dr=document.createElement('aside');dr.className='drawer';dr.setAttribute('aria-label','Sumário');dr.setAttribute('aria-hidden','true');
+  dr.innerHTML='<div class="dr-head"><div><div class="k">História · 8º ano</div><div class="t">O Mundo Partilhado</div></div><button class="dr-close" aria-label="Fechar sumário">×</button></div><div class="dr-prog"><span id="drLbl">Capa</span><i><span id="drBar"></span></i></div><div class="dr-body" id="drBody"></div>';
+  document.body.append(tab,ov,dr);
+  var body=dr.querySelector('#drBody');
+  function slug(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+  function title(id){var s=sec(id);if(!s)return '';var h=s.querySelector('h2');return h?h.textContent:'Capa'}
+  function num(id){var s=sec(id);var n=s&&s.querySelector('.ch-num');return n?n.textContent:'·'}
+  function subs(id){var out=[];var s=sec(id);if(!s)return out;s.querySelectorAll('.body h3').forEach(function(h){if(!h.id)h.id=id+'-'+slug(h.textContent);out.push(h)});return out}
+  var links={};
+  function link(id,cls){var a=document.createElement('a');a.href='#'+id;a.className=cls;links[id]=a;return a}
+  [['capa','Capa'],['habilidades','Habilidades e objetivos'],['abertura','Para começar']].forEach(function(p){var a=link(p[0],'dr-link');a.textContent=p[1];body.appendChild(a)});
+  var groups=[];
+  function item(id,pn){
+    if(!sec(id))return;
+    var it=document.createElement('div');it.className='item';
+    var row=document.createElement('div');row.className='row';
+    var a=link(id,'');a.innerHTML='<b>'+num(id)+'</b><span>'+title(id)+'</span>';row.appendChild(a);
+    var ss=id.indexOf('cap')===0?subs(id):[];
+    if(ss.length){
+      var tb=document.createElement('button');tb.setAttribute('aria-label','Mostrar tópicos');tb.setAttribute('aria-expanded','false');
+      tb.addEventListener('click',function(e){e.stopPropagation();var o=it.classList.toggle('open');tb.setAttribute('aria-expanded',o)});
+      row.appendChild(tb);
+      var sb=document.createElement('div');sb.className='subs';
+      ss.forEach(function(h){var s=document.createElement('a');s.href='#'+h.id;s.textContent=h.textContent;sb.appendChild(s)});
+      it.append(row,sb);
+    } else it.appendChild(row);
+    pn.appendChild(it);
+  }
+  function group(label,ids,open,uid){
+    var g=document.createElement('div');g.className='acc'+(open?' open':'');
+    var b=document.createElement('button');b.textContent=label;b.setAttribute('aria-expanded',open?'true':'false');
+    var pn=document.createElement('div');pn.className='panel';
+    if(uid&&sec(uid)){var it0=document.createElement('div');it0.className='item';var r0=document.createElement('div');r0.className='row';var a0=link(uid,'');a0.innerHTML='<b>◆</b><span>Abertura da unidade</span>';r0.appendChild(a0);it0.appendChild(r0);pn.appendChild(it0)}
+    ids.forEach(function(id){item(id,pn)});
+    b.addEventListener('click',function(){var o=!g.classList.contains('open');
+      body.querySelectorAll('.acc').forEach(function(x){x.classList.remove('open');x.firstChild.setAttribute('aria-expanded','false')});
+      if(o){g.classList.add('open');b.setAttribute('aria-expanded','true')}});
+    g.append(b,pn);body.appendChild(g);groups.push({g:g,ids:ids.concat(uid?[uid]:[])});return g;
+  }
+  UNITS.forEach(function(u,i){group(u[0],u[2],i===0,null)});
+  group('Para consultar',CONSULT,false,null);
+  function open(){dr.classList.add('open');ov.classList.add('open');tab.setAttribute('aria-expanded','true');dr.setAttribute('aria-hidden','false')}
+  function close(){dr.classList.remove('open');ov.classList.remove('open');tab.setAttribute('aria-expanded','false');dr.setAttribute('aria-hidden','true')}
+  tab.addEventListener('click',open);ov.addEventListener('click',close);dr.querySelector('.dr-close').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  body.addEventListener('click',function(e){if(e.target.closest('a'))close()});
+  var order=['capa','habilidades','abertura'];
+  UNITS.forEach(function(u){order.push(u[1]);u[2].forEach(function(c){order.push(c)})});
+  CONSULT.forEach(function(c){order.push(c)});
+  order=order.filter(function(k){return sec(k)});
+  var lbl=dr.querySelector('#drLbl'),pbar=dr.querySelector('#drBar');
+  function setActive(id){
+    Object.keys(links).forEach(function(k){links[k].classList.remove('on')});
+    if(links[id])links[id].classList.add('on');
+    var m=/^cap(\d+)$/.exec(id);
+    lbl.textContent=m?('Capítulo '+m[1]+' de 5 · '+title(id)):(title(id)||'Capa');
+    pbar.style.width=((order.indexOf(id)+1)/order.length*100)+'%';
+    if(!dr.classList.contains('open')){groups.forEach(function(gr){if(gr.ids.indexOf(id)>=0&&!gr.g.classList.contains('open')){body.querySelectorAll('.acc').forEach(function(x){x.classList.remove('open')});gr.g.classList.add('open')}})}
+  }
+  setActive('capa');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setActive(e.target.id)})},{rootMargin:'-30% 0px -60% 0px'});
+    order.forEach(function(k){io.observe(sec(k))});
+  }
+})();
+</script>
+<script>
+(function(){
+  const imagens=[
+    {src:'img/mapa1.webp',alt:'Mapa conceitual ilustrado sobre a Primeira Revolução Industrial',rotulo:'Abrir mapa conceitual da Primeira Revolução Industrial em nova aba'},
+    {src:'img/jornal1.webp',alt:'Jornal ilustrado sobre a Primeira Revolução Industrial',rotulo:'Abrir jornal ilustrado da Primeira Revolução Industrial em nova aba'}
+  ];
+  let indice=0;
+  const link=document.getElementById('primeira-revolucao-mapa');
+  const img=document.getElementById('primeira-imagem-atual');
+  const contador=document.getElementById('primeira-contador');
+  if(!link||!img||!contador)return;
+  function mostrar(proximo){indice=(proximo+imagens.length)%imagens.length;const item=imagens[indice];link.href=item.src;link.setAttribute('aria-label',item.rotulo);img.src=item.src;img.alt=item.alt;contador.textContent=(indice+1)+' / '+imagens.length;}
+  document.getElementById('primeira-anterior').addEventListener('click',()=>mostrar(indice-1));
+  document.getElementById('primeira-proxima').addEventListener('click',()=>mostrar(indice+1));
+})();
+</script>
+</body>
+</html>
