@@ -1404,6 +1404,11 @@ const dialog=document.getElementById('viewer'),stage=document.getElementById('st
   if(!link||!fonte)return;
   var base=location.href.split('#')[0].replace(/[^\/]*$/,'');
   var html=fonte.textContent.split('__IMG64__').join('img/capa.webp').replace(/<\\\/script>/g,'<'+'/script>').replace('<head>','<head><base href="'+base+'">');
+  if(/^https?:/.test(location.protocol)){
+    var htmlWeb=fonte.textContent.split('__IMG64__').join(new URL('img/capa.webp',location.href.split('#')[0]).href).replace(/<\\\/script>/g,'<'+'/script>');
+    link.href=URL.createObjectURL(new Blob([htmlWeb],{type:'text/html;charset=utf-8'}));link.target='_blank';link.rel='noopener noreferrer';
+    return;
+  }
   link.addEventListener('click',function(e){
     e.preventDefault();
     var w=window.open('','_blank');
@@ -1609,6 +1614,6 @@ main{flex:1 1 auto;display:flex;width:100%;max-width:none;margin:0;padding:clamp
 (function(){[['abrir-porque','porque-fonte'],['abrir-justificativas','justificativas-fonte'],['abrir-hoje','hoje-fonte'],['abrir-palavras','palavras-fonte'],['abrir-pensar','pensar-fonte']].forEach(function(p){var l=document.getElementById(p[0]),f=document.getElementById(p[1]);if(!l||!f)return;
 var im=new URL('img/capa.webp',location.href.split('#')[0]).href;l.href=URL.createObjectURL(new Blob([f.textContent.split('__IMG64__').join(im)],{type:'text/html;charset=utf-8'}));l.target='_blank';l.rel='noopener noreferrer';});})();
 </script>
-<style>.q-help,.pergunta-capa{position:relative}.q-help[data-n]::after,.pergunta-capa[data-n]::after{content:attr(data-n);position:absolute;top:-8px;right:-9px;min-width:17px;height:17px;padding:0 3px;border-radius:99px;background:#12304a;color:#fff;border:2px solid #fff;font:800 10px/13px var(--sans);text-align:center;box-sizing:border-box}</style>
+<style>.q-help,.pergunta-capa{position:relative}@media(max-width:640px){.q-help{width:34px!important;height:34px!important;font-size:19px!important}.q-help[data-n]::after,.pergunta-capa[data-n]::after{top:-6px;right:-8px}}.q-help[data-n]::after,.pergunta-capa[data-n]::after{content:attr(data-n);position:absolute;top:-8px;right:-9px;min-width:17px;height:17px;padding:0 3px;border-radius:99px;background:#12304a;color:#fff;border:2px solid #fff;font:800 10px/13px var(--sans);text-align:center;box-sizing:border-box}</style>
 </body>
 </html>
